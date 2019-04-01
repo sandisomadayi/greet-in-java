@@ -7,7 +7,8 @@ public class Greet implements Greeting {
 
     private String userName;
     private Language language;
-    private int userNameCount;
+    private int userNameCount = 1;
+    private String command;
 
     private Map<String, Integer> userNameMap = new HashMap<>();
 
