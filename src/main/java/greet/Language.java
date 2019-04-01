@@ -11,10 +11,13 @@ public enum  Language {
     Tswana(""),
     Tsonga(""),
     Swati(""),
-    Ndebele("");
+    Ndebele("Lotshani");
 
     private String greeting;
     Language(String greeting) {
         this.greeting = greeting;
+    }
+    public String getGreeting() {
+        return greeting;
     }
 }

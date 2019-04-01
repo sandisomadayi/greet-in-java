@@ -1,12 +1,13 @@
 package greet;
 
-import java.util.List;
 import java.util.Map;
 
 public interface Greeting {
 
-    Language greet(String userName, Language language);
-    List greeted();
+    String greet(String userName, Language language);
+    Map<String, Integer> greeted();
+    int greeted(String useName);
+    int counter();
     void exit();
     Command help();
 }
