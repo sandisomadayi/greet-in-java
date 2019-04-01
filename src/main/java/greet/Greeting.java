@@ -8,7 +8,7 @@ public interface Greeting {
     Map<String, Integer> greeted();
     int greeted(String userName);
     int counter();
-    void clear();
+    void clearMap();
     void exit();
     //Command help();
 }

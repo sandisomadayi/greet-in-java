@@ -18,6 +18,7 @@ public class Greet implements Greeting {
     }
 
     public String greet(String userName, Language language) {
+        //if (userName.equals(""))
         if (userNameMap.containsKey(userName)) {
             userNameMap.put(userName, userNameCount + 1);
         }
@@ -38,10 +39,8 @@ public class Greet implements Greeting {
     public int counter() {
         return userNameMap.size();
     }
-    public void clear() {
-        for (Map.Entry<String, Integer> entry : userNameMap.entrySet()) {
-            entry.setValue(1);
-        }
+    public void clearMap() {
+        userNameMap.clear();
     }
 
     public void exit() {

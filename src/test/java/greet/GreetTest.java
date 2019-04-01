@@ -17,7 +17,7 @@ public class GreetTest {
         greet.greet("me", Language.Xhosa);
         greet.greet("anotherMe", Language.Venda);
 
-        System.out.println(greet.greeted());
+        //System.out.println(greet.greeted());
         assertEquals("Molo", greet.greet("sandiso", Language.Xhosa));
     }
     @Test
@@ -59,8 +59,8 @@ public class GreetTest {
         greet.greet("me", Language.Xhosa);
         greet.greet("anotherMe", Language.Venda);
 
-        greet.clear();
-        System.out.println(greet.counter());
-        //assertEquals(0, greet.counter());
+        greet.clearMap();
+        //System.out.println(greet.counter());
+        assertEquals(0, greet.counter());
     }
 }
