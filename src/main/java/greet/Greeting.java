@@ -6,8 +6,9 @@ public interface Greeting {
 
     String greet(String userName, Language language);
     Map<String, Integer> greeted();
-    int greeted(String useName);
+    int greeted(String userName);
     int counter();
+    void clear();
     void exit();
-    Command help();
+    //Command help();
 }
