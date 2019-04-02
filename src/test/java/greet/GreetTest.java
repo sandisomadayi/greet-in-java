@@ -17,7 +17,8 @@ public class GreetTest {
         greet.greet("me", Language.Xhosa);
         greet.greet("anotherMe", Language.Venda);
 
-        //System.out.println(greet.greeted());
+        //greet.greet("d", Language.Xhosa);
+        //System.out.println(greet.greet("sandiso", Language.Xhosa));
         assertEquals("Molo", greet.greet("sandiso", Language.Xhosa));
     }
     @Test
@@ -32,7 +33,7 @@ public class GreetTest {
 
 
         assertEquals(2, greet.greeted("sandiso"));
-        assertEquals(greet.greeted(), greet.greeted());
+        assertEquals("{anotherMe=1, me=1, sandman=1, sandiso=2}", greet.greeted().toString());
     }
 
     @Test

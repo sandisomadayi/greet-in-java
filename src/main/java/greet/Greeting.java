@@ -9,6 +9,7 @@ public interface Greeting {
     int greeted(String userName);
     int counter();
     void clearMap();
+    String help();
     void exit();
     //Command help();
 }
