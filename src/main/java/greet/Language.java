@@ -6,12 +6,12 @@ public enum  Language {
     Sotho("Dumela"),
     Venda("Ndaa"),
     English("Hello"),
-    Afrikaans(""),
-    Pedi(""),
+    Afrikaans("Hallo"),
+    Pedi("Thobela"),
     Tswana(""),
     Tsonga(""),
     Swati(""),
-    Ndebele("Lotshani");
+    Ndebele("Lotjhani");
 
     private String greeting;
     Language(String greeting) {

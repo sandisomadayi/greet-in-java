@@ -10,6 +10,4 @@ public interface Greeting {
     int counter();
     void clearMap();
     String help();
-    void exit();
-    //Command help();
 }

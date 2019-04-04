@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12196e09-662c-4a96-8d21-63e50e1eb379" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/greet-in-java.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/greet/Greet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/greet/Greet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/greet/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/greet/Greeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/greet/Language.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/greet/Language.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/greet/GreetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/greet/GreetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/greet/Greet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/greet/Greet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/greet/Greeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/greet/Greeting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/greet/Language.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/greet/Language.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/greet/GreetTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/greet/GreetTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,25 +21,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/greet/Greet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+            <state relative-caret-position="237">
+              <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1295#1296#0" expanded="true" />
-                <element signature="e#1329#1330#0" expanded="true" />
-                <element signature="e#1376#1377#0" expanded="true" />
-                <element signature="e#1424#1425#0" expanded="true" />
-                <element signature="e#1457#1458#0" expanded="true" />
-                <element signature="e#1498#1499#0" expanded="true" />
-                <element signature="e#1532#1533#0" expanded="true" />
-                <element signature="e#1567#1568#0" expanded="true" />
-                <element signature="e#1598#1599#0" expanded="true" />
-                <element signature="e#1682#1683#0" expanded="true" />
-                <element signature="e#1726#1727#0" expanded="true" />
-                <element signature="e#1756#1757#0" expanded="true" />
+                <element signature="e#1357#1358#0" expanded="true" />
+                <element signature="e#1391#1392#0" expanded="true" />
+                <element signature="e#1434#1435#0" expanded="true" />
+                <element signature="e#1482#1483#0" expanded="true" />
+                <element signature="e#1511#1512#0" expanded="true" />
+                <element signature="e#1552#1553#0" expanded="true" />
+                <element signature="e#1582#1583#0" expanded="true" />
+                <element signature="e#1617#1618#0" expanded="true" />
+                <element signature="e#1646#1647#0" expanded="true" />
+                <element signature="e#1730#1731#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/greet/RunGreet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="33" column="61" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,8 +58,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/greet/Language.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="135">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+              <folding>
+                <element signature="e#313#314#0" expanded="true" />
+                <element signature="e#353#354#0" expanded="true" />
+                <element signature="e#387#388#0" expanded="true" />
+                <element signature="e#418#419#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/greet/Greeting.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -61,13 +82,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/greet/GreetTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+            <state relative-caret-position="-76">
+              <caret line="14" column="28" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -75,13 +103,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/main/java/greet/RunMain.java" />
         <option value="$PROJECT_DIR$/src/test/java/greet/GreetTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/greet/Greeting.java" />
         <option value="$PROJECT_DIR$/src/main/java/greet/Greet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/greet/Language.java" />
+        <option value="$PROJECT_DIR$/src/main/java/greet/RunGreet.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="59" />
     <option name="y" value="27" />
     <option name="width" value="1270" />
@@ -153,12 +184,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554191579532" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554388543725" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -172,7 +204,48 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.GreetTest.shouldReturnGreetingTest">
+  <component name="RunManager" selected="Application.RunGreet">
+    <configuration name="Greet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="greet.Greet" />
+      <module name="greet-in-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="greet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunGreet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="greet.RunGreet" />
+      <module name="greet-in-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="greet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GreetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="greet-in-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="greet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="greet" />
+      <option name="MAIN_CLASS_NAME" value="greet.GreetTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GreetTest.shouldReturnGreetedUserNamesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="greet-in-java" />
       <extension name="coverage">
@@ -207,7 +280,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RunGreet" />
+        <item itemvalue="Application.Greet" />
         <item itemvalue="JUnit.GreetTest.shouldReturnGreetingTest" />
+        <item itemvalue="JUnit.GreetTest" />
         <item itemvalue="JUnit.GreetTest.shouldReturnGreetedUserNamesTest" />
       </list>
     </recent_temporary>
@@ -226,42 +302,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GreetTest_shouldReturnGreetingTest - 2019.04.02 at 09h 11m 02s.xml">
-      <configuration name="GreetTest.shouldReturnGreetingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GreetTest_shouldReturnGreetingTest - 2019.04.02 at 09h 14m 43s.xml">
-      <configuration name="GreetTest.shouldReturnGreetingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GreetTest_shouldReturnGreetingTest - 2019.04.02 at 09h 36m 12s.xml">
-      <configuration name="GreetTest.shouldReturnGreetingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GreetTest_shouldReturnGreetingTest - 2019.04.02 at 09h 37m 33s.xml">
-      <configuration name="GreetTest.shouldReturnGreetingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GreetTest_shouldReturnGreetingTest - 2019.04.02 at 09h 37m 43s.xml">
-      <configuration name="GreetTest.shouldReturnGreetingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GreetTest_shouldReturnGreetingTest - 2019.04.02 at 09h 38m 21s.xml">
-      <configuration name="GreetTest.shouldReturnGreetingTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GreetTest_shouldReturnGreetedUserNamesTest - 2019.04.02 at 09h 42m 43s.xml">
+    <history-entry file="GreetTest_shouldReturnGreetedUserNamesTest - 2019.04.02 at 12h 13m 38s.xml">
       <configuration name="GreetTest.shouldReturnGreetedUserNamesTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetTest_shouldReturnGreetedUserNamesTest - 2019.04.02 at 09h 44m 05s.xml">
-      <configuration name="GreetTest.shouldReturnGreetedUserNamesTest" configurationId="JUnit" />
+    <history-entry file="GreetTest_shouldReturnGreetingTest - 2019.04.03 at 14h 54m 44s.xml">
+      <configuration name="GreetTest.shouldReturnGreetingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetTest_shouldReturnGreetedUserNamesTest - 2019.04.02 at 09h 45m 23s.xml">
-      <configuration name="GreetTest.shouldReturnGreetedUserNamesTest" configurationId="JUnit" />
+    <history-entry file="GreetTest_shouldReturnGreetingTest - 2019.04.03 at 14h 54m 59s.xml">
+      <configuration name="GreetTest.shouldReturnGreetingTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="GreetTest_shouldReturnGreetingTest - 2019.04.02 at 09h 47m 31s.xml">
+    <history-entry file="GreetTest_shouldReturnGreetingTest - 2019.04.03 at 15h 01m 24s.xml">
+      <configuration name="GreetTest.shouldReturnGreetingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GreetTest_shouldReturnGreetingTest - 2019.04.03 at 15h 11m 44s.xml">
+      <configuration name="GreetTest.shouldReturnGreetingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GreetTest_shouldReturnGreetingTest - 2019.04.03 at 15h 45m 46s.xml">
+      <configuration name="GreetTest.shouldReturnGreetingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GreetTest_shouldReturnGreetingTest - 2019.04.03 at 15h 46m 34s.xml">
+      <configuration name="GreetTest.shouldReturnGreetingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GreetTest_shouldReturnGreetingTest - 2019.04.03 at 15h 47m 20s.xml">
+      <configuration name="GreetTest.shouldReturnGreetingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GreetTest_shouldReturnGreetingTest - 2019.04.04 at 10h 01m 24s.xml">
+      <configuration name="GreetTest.shouldReturnGreetingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GreetTest_shouldReturnGreetingTest - 2019.04.04 at 10h 18m 58s.xml">
       <configuration name="GreetTest.shouldReturnGreetingTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="59" y="25" width="1307" height="743" extended-state="7" />
+    <frame x="59" y="25" width="1307" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25376686" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2854877" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -270,12 +346,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990228" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32899022" />
@@ -296,45 +372,76 @@
     <entry file="file://$PROJECT_DIR$/greet-in-java.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="jrt:///usr/lib/jvm/default-java!/java.base/java/lang/Comparable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#198#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jrt:///usr/lib/jvm/default-java!/java.base/java/lang/Enum.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/greet/GreetTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        <state relative-caret-position="-76">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/greet/Language.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="135">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding>
+            <element signature="e#313#314#0" expanded="true" />
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#387#388#0" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/greet/Greeting.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/greet/Greet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
+        <state relative-caret-position="237">
+          <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1295#1296#0" expanded="true" />
-            <element signature="e#1329#1330#0" expanded="true" />
-            <element signature="e#1376#1377#0" expanded="true" />
-            <element signature="e#1424#1425#0" expanded="true" />
-            <element signature="e#1457#1458#0" expanded="true" />
-            <element signature="e#1498#1499#0" expanded="true" />
-            <element signature="e#1532#1533#0" expanded="true" />
-            <element signature="e#1567#1568#0" expanded="true" />
-            <element signature="e#1598#1599#0" expanded="true" />
-            <element signature="e#1682#1683#0" expanded="true" />
-            <element signature="e#1726#1727#0" expanded="true" />
-            <element signature="e#1756#1757#0" expanded="true" />
+            <element signature="e#1357#1358#0" expanded="true" />
+            <element signature="e#1391#1392#0" expanded="true" />
+            <element signature="e#1434#1435#0" expanded="true" />
+            <element signature="e#1482#1483#0" expanded="true" />
+            <element signature="e#1511#1512#0" expanded="true" />
+            <element signature="e#1552#1553#0" expanded="true" />
+            <element signature="e#1582#1583#0" expanded="true" />
+            <element signature="e#1617#1618#0" expanded="true" />
+            <element signature="e#1646#1647#0" expanded="true" />
+            <element signature="e#1730#1731#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/greet/RunGreet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="33" column="61" selection-start-line="33" selection-start-column="57" selection-end-line="33" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

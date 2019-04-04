@@ -9,31 +9,41 @@ public class Greet implements Greeting {
     private String userName;
     private Language language;
     private int userNameCount = 1;
-    private String command;
-//    private String languageTwo = language.toString();
+    private String languageTwo;
+    private String[] inputs;
 
-    Scanner scanner = new Scanner(System.in);
     private Map<String, Integer> userNameMap = new HashMap<>();
 
     public Greet(String userName, Language language) {
         this.userName = userName;
         this.language = language;
     }
+
     public String greet (String userName, Language language){
-        //System.out.println("Please enter a username & a language to be greeted in: ");
-        //command = scanner.nextLine();
-        //  userName = scanner.next();
-        // languageTwo = scanner.next();
-//        System.out.println(Language.valueOf("language").getGreeting() + ", " + userName);
-        if (language.toString() != "") {
-            if (userNameMap.containsKey(userName)) {
-                userNameMap.put(userName, userNameCount + 1);
-            } else {
-                userNameMap.put(userName, userNameCount);
-            }
-            //return language.getGreeting();
+//        System.out.println(Language.valueOf("inputs[1]").getGreeting() + ", " + userName);
+        if (userNameMap.containsKey(userName.toLowerCase())) {
+            userNameMap.put(userName.toLowerCase(), userNameCount + 1);
+        } else {
+            userNameMap.put(userName.toLowerCase(), userNameCount);
         }
-        return English.getGreeting();
+        return "Hello " + userName;
+//        switch(language) {
+//            case Xhosa: {
+//                return Xhosa.getGreeting();
+//            }
+//            case English: {
+//                return English.getGreeting();
+//            }
+//            case Zulu: {
+//                return Zulu.getGreeting();
+//            }
+//            case Sotho: {
+//                return Sotho.getGreeting();
+//            }
+//            default: {
+//                return English.getGreeting();
+//            }
+//         }
     }
 
     public Map<String, Integer> greeted () {
@@ -55,7 +65,4 @@ public class Greet implements Greeting {
         return "Commands to use\nGreet\nGreeted\ncounter\nClear\nHelp\nExit";
     }
 
-    public void exit () {
-        System.exit(0);
-    }
 }
