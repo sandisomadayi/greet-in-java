@@ -1,13 +1,13 @@
-package greet;
+package net.greet;
 
 import java.util.Map;
 
 public interface Greeting {
 
-    String greet(String userName, Language language);
+    String greet(String userName, String language);
     Map<String, Integer> greeted();
-    int greeted(String userName);
-    int counter();
+    String greeted(String userName);
+    String counter();
     void clearMap();
     String help();
 }
