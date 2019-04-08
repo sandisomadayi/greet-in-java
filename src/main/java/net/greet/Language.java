@@ -1,4 +1,4 @@
-package net.greet.languages;
+package net.greet;
 
 public enum  Language {
     xhosa("Molo"),

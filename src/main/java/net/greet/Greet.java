@@ -1,7 +1,5 @@
 package net.greet;
 
-import net.greet.languages.Language;
-
 import java.util.*;
 
 public class Greet implements Greeting {
@@ -11,7 +9,6 @@ public class Greet implements Greeting {
     private int userNameCount = 1;
     private String languageTwo;
     private String[] inputs;
-    private int count;
 
     private Map<String, Integer> userNameMap = new HashMap<>();
 
@@ -28,7 +25,14 @@ public class Greet implements Greeting {
             userNameMap.put(userName.toLowerCase(), userNameCount);
         }
 
-        return Language.valueOf(language.toLowerCase()).getGreeting() + " " + userName;
+//        if (Language.valueOf(language).equals(language)) {
+//            return Language.english.getGreeting();
+//        }
+        try {
+            return Language.valueOf(language.toLowerCase()).getGreeting() + " " + userName;
+        }catch (IllegalArgumentException e) {
+            return Language.valueOf("english").getGreeting() + " " + userName;
+        }
 
     }
 
@@ -46,12 +50,12 @@ public class Greet implements Greeting {
     public void clearMap () {
         userNameMap.clear();
     }
-    public void clear() {
-        count = userNameMap.get(userName);
+    public void clearUserName(String userName) {
+        userNameMap.remove(userName);
     }
 
     public String help () {
-        return "Valid commands are:\ngreet\ngreeted\ncounter\nclear\nhelp\nexit";
+        return "Valid commands are:\ngreet\ngreeted\ncounter\nclear\nhelp\nexit\n";
     }
 
 }

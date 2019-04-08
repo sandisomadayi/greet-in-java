@@ -1,8 +1,6 @@
 package net.greet;
 
 
-import net.greet.languages.Language;
-
 import java.util.Scanner;
 
 public class Greeter {
@@ -17,12 +15,14 @@ public class Greeter {
             String[] inputs = input.split(" ");
             String command = inputs[0].toLowerCase();
 
-            if (inputs.length < 2) {
+            if (inputs.length == 1) {
                 if (command.equals("exit")) {
                     break;
-                } else if (command.equals("help")) {
+                }
+                else if (command.equals("help")) {
                     System.out.println(greet.help());
-                } else if (command.equals("greeted")) {
+                }
+                else if (command.equals("greeted")) {
                     System.out.println(greet.greeted());
                 }
                 else if (command.equals("clear")) {
@@ -31,26 +31,32 @@ public class Greeter {
                 else if (command.equals("count")) {
                     System.out.println(greet.counter());
                 }
-
+                else {
+                    System.out.println("Invalid command!");
+                    System.out.println(greet.help());
+                }
             }
-            else {
+            else if (inputs.length == 2) {
                 String name = inputs[1].toLowerCase();
                 if (command.equals("greet")) {
-                    if (inputs.length == 2) {
-                        String language = "Venda";
-                        System.out.println(greet.greet(name, language));
-                    } else if (inputs.length == 3) {
-                        String language = inputs[2];
-                        System.out.println(greet.greet(name, language));
-                    } else {
-                        System.out.println("Invalid command!");
-                    }
+                    System.out.println(greet.greet(name, "english"));
                 }
-                else if (command.equals("clear " + name)) {
-                    greet.clear();
+                else if (input.equals("clear " + name)) {
+                    greet.clearUserName(name);
                 }
                 else if (input.equals("greeted " + name)) {
                     System.out.println(greet.greeted(name));
+                }
+                else {
+                    System.out.println("Invalid command!");
+                    System.out.println(greet.help());
+                }
+            }
+            else if (inputs.length == 3) {
+                if (command.equals("greet")) {
+                    String name = inputs[1].toLowerCase();
+                    String language = inputs[2].toLowerCase();
+                    System.out.println(greet.greet(name, language));
                 }
                 else {
                     System.out.println("Invalid command!");
