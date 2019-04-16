@@ -4,8 +4,11 @@ import net.greet.Greet;
 import net.greet.Language;
 import org.junit.jupiter.api.Test;
 
-//import static Language.*;
+import java.sql.*;
+
+import static java.lang.Class.forName;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class GreetTest {
 
@@ -31,7 +34,7 @@ public class GreetTest {
         greet.greet("me", "Xhosa");
         greet.greet("anotherMe", "Venda");
 
-        assertEquals("{anotherme=1, me=1, sandman=1, sandiso=2}", greet.greeted().toString());
+        assertEquals("{anotherme=1, me=1, sandman=1, sandiso=2}", greet.greeted(null).toString());
     }
 
     @Test
@@ -59,7 +62,7 @@ public class GreetTest {
         greet.greet("anotherMe", "Venda");
 
 
-        assertEquals("the size of the map is 4", greet.counter());
+        assertEquals("number of name(s) greeted 4", greet.counter());
     }
 
     @Test
@@ -72,9 +75,9 @@ public class GreetTest {
         greet.greet("me", "Xhosa");
         greet.greet("anotherMe", "Venda");
 
-        greet.clearMap();
+        greet.clear(null);
         //System.out.println(greet.counter());
-        assertEquals("the size of the map is 0", greet.counter());
+        assertEquals("number of name(s) greeted 0", greet.counter());
     }
 
     @Test
@@ -87,14 +90,44 @@ public class GreetTest {
         greet.greet("me", "Xhosa");
         greet.greet("anotherMe", "Venda");
 
-        greet.clearUserName("sandiso");
-        assertEquals("{anotherme=1, me=1, sandman=1}", greet.greeted().toString());
+        greet.clear("sandiso");
+        assertEquals("{anotherme=1, me=1, sandman=1}", greet.greeted(null).toString());
     }
 
     @Test
     public void shouldReturnAllCommands() {
         Greet greet = new Greet("sandman", Language.xhosa);
 
-        assertEquals("Valid commands are:\ngreet\ngreeted\ncounter\nclear\nhelp\nexit\n", greet.help());
+        assertEquals("Valid commands are:\ngreet\ngreeted\ncount\nclear\nhelp\nexit\n", greet.help());
     }
+
+    final String DATABASE_LINK = "jdbc:h2:./target/userNames_db";
+    @Test
+    public void someMethod() {
+        Greet greet = new Greet("name", Language.xhosa);
+        try {
+            forName("org.h2.Driver");
+            Connection connection = DriverManager.getConnection(DATABASE_LINK);
+
+            Statement statement = connection.createStatement();
+            final String INSERT_NAME = "insert into people (name) values (?)";
+
+            PreparedStatement addName = connection.prepareStatement(INSERT_NAME);
+
+            addName.setString(1, "sandiso");
+            addName.execute();
+            addName.setString(1, "me");
+            addName.execute();
+
+            ResultSet res = connection.createStatement().executeQuery("select * from people w");
+        }
+        catch (Exception e) {
+            fail(e);
+        }
+    }
+
+//    @Test
+//    public void shouldAddNames() {
+//
+//    }
 }
