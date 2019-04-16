@@ -9,7 +9,7 @@ public enum  Language {
     afrikaans("Hallo"),
     pedi("Thobela"),
     tswana(""),
-    tsonga(""),
+    tsonga("Avuxeni"),
     swati(""),
     ndebele("Lotjhani");
 
