@@ -17,7 +17,7 @@ public class Greet implements Greeting {
         this.language = language;
     }
 
-    public String greet (String userName, String language){
+    public String greet (String userName, String language) {
 //        System.out.println(Language.valueOf("inputs[1]").getGreeting() + ", " + userName);
         if (userNameMap.containsKey(userName.toLowerCase())) {
             userNameMap.put(userName.toLowerCase(), userNameMap.get(userName) + 1);
@@ -25,9 +25,6 @@ public class Greet implements Greeting {
             userNameMap.put(userName.toLowerCase(), userNameCount);
         }
 
-//        if (Language.valueOf(language).equals(language)) {
-//            return Language.english.getGreeting();
-//        }
         try {
             return Language.valueOf(language.toLowerCase()).getGreeting() + " " + userName;
         }catch (IllegalArgumentException e) {
@@ -36,26 +33,47 @@ public class Greet implements Greeting {
 
     }
 
-    public Map<String, Integer> greeted () {
-        return userNameMap;
-    }
-
-    public String greeted (String userName){
-        return "user name " + userName + " was greeted " + userNameMap.get(userName) + " time(s)";
+    public String greeted(String userName) {
+        try {
+            if (userName == null) {
+                return userNameMap.toString();
+            } else {
+                return "user name " + userName + " was greeted " + userNameMap.get(userName) + " time(s)";
+            }
+        }
+        catch (NullPointerException e) {
+            if (userNameMap.isEmpty() == true) {
+                return "no one is greeted";
+            }
+            else {
+                return userNameMap.toString();
+            }
+        }
     }
 
     public String counter () {
-        return "the size of the map is " + userNameMap.size();
+        return "number of name(s) greeted " + userNameMap.size();
     }
-    public void clearMap () {
-        userNameMap.clear();
-    }
-    public void clearUserName(String userName) {
-        userNameMap.remove(userName);
+
+    public String clear(String userName) {
+        try {
+            if (userName == null) {
+                userNameMap.clear();
+                return "map cleared";
+            }
+            else {
+                userNameMap.remove(userName);
+                return userName + " removed from the map";
+            }
+        }
+        catch (NullPointerException e) {
+            userNameMap.remove(userName);
+            return userName + " removed from the map";
+        }
     }
 
     public String help () {
-        return "Valid commands are:\ngreet\ngreeted\ncounter\nclear\nhelp\nexit\n";
+        return "Valid commands are:\ngreet\ngreeted\ncount\nclear\nhelp\nexit\n";
     }
 
 }
