@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12196e09-662c-4a96-8d21-63e50e1eb379" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/Greet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/Greet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/Greeter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/Greeter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/Greeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/Greeting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/net/GreetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/GreetTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="12196e09-662c-4a96-8d21-63e50e1eb379" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +45,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/net/DataBaseMethodsTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="197">
-              <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+              <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -436,7 +430,7 @@
       <window_info id="Job Explorer" order="9" weight="0.3298969" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.36970684" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36970684" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990228" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -598,7 +592,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/net/DataBaseMethodsTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
-          <caret line="30" column="36" lean-forward="true" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
