@@ -1,17 +1,17 @@
 package net.greet;
 
 public enum  Language {
-    xhosa("Molo"),
-    zulu("Sawubona"),
-    sotho("Dumela"),
-    venda("Ndaa"),
-    english("Hello"),
-    afrikaans("Hallo"),
-    pedi("Thobela"),
+    xhosa("Molo, "),
+    zulu("Sawubona, "),
+    sotho("Dumela, "),
+    venda("Ndaa, "),
+    english("Hello, "),
+    afrikaans("Hallo, "),
+    pedi("Thobela, "),
     tswana(""),
-    tsonga("Avuxeni"),
+    tsonga("Avuxeni, "),
     swati(""),
-    ndebele("Lotjhani");
+    ndebele("Lotjhani, ");
 
     private String greeting;
     Language(String greeting) {

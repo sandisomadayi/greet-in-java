@@ -7,8 +7,14 @@ public class Greet implements Greeting {
     private String userName;
     private Language language;
     private int userNameCount = 1;
-    private String languageTwo;
-    private String[] inputs;
+
+    private static final String GREEN = "\033[1;32m";
+    private static final String RESET = "\033[0m";
+    private static final String YELLOW = "\033[0;33m";  // YELLOW
+    private static final String BLUE = "\033[0;34m";    // BLUE
+    private static final String PURPLE = "\033[0;35m";  // PURPLE
+    private static final String CYAN = "\033[0;36m";    // CYAN
+    private static final String RED = "\033[0;31m";
 
     private Map<String, Integer> userNameMap = new HashMap<>();
 
@@ -26,9 +32,9 @@ public class Greet implements Greeting {
         }
 
         try {
-            return Language.valueOf(language.toLowerCase()).getGreeting() + " " + userName;
+            return YELLOW + Language.valueOf(language.toLowerCase()).getGreeting() + userName + RESET;
         }catch (IllegalArgumentException e) {
-            return Language.valueOf("english").getGreeting() + " " + userName;
+            return YELLOW + Language.valueOf("english").getGreeting() + " " + userName + RESET;
         }
 
     }
@@ -36,44 +42,48 @@ public class Greet implements Greeting {
     public String greeted(String userName) {
         try {
             if (userName == null) {
+                if (userNameMap.isEmpty()) {
+                    return CYAN + "no one is greeted" + RESET;
+                }
                 return userNameMap.toString();
+
             } else {
-                return "user name " + userName + " was greeted " + userNameMap.get(userName) + " time(s)";
+                return PURPLE + "user name " + userName + " was greeted " + userNameMap.get(userName) + " time(s)" + RESET;
             }
         }
         catch (NullPointerException e) {
-            if (userNameMap.isEmpty() == true) {
-                return "no one is greeted";
+            if (userNameMap.isEmpty()) {
+                return CYAN + "no one is greeted" + RESET;
             }
             else {
-                return userNameMap.toString();
+                return CYAN + "no one is greeted" + RESET;
             }
         }
     }
 
     public String counter () {
-        return "number of name(s) greeted " + userNameMap.size();
+        return BLUE + "number of name(s) greeted " + userNameMap.size() + RESET;
     }
 
     public String clear(String userName) {
         try {
             if (userName == null) {
                 userNameMap.clear();
-                return "map cleared";
+                return RED + "All names deleted" + RESET;
             }
             else {
                 userNameMap.remove(userName);
-                return userName + " removed from the map";
+                return RED + userName + " removed from the map" + RESET;
             }
         }
         catch (NullPointerException e) {
             userNameMap.remove(userName);
-            return userName + " removed from the map";
+            return RED + "All names deleted" + RESET;
         }
     }
 
     public String help () {
-        return "Valid commands are:\ngreet\ngreeted\ncount\nclear\nhelp\nexit\n";
+        return GREEN + "Valid commands are:\ngreet\ngreeted\ncount\nclear\nhelp\nexit\n" + RESET;
     }
 
 }

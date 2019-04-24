@@ -4,11 +4,7 @@ import net.greet.Greet;
 import net.greet.Language;
 import org.junit.jupiter.api.Test;
 
-import java.sql.*;
-
-import static java.lang.Class.forName;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
 
 public class GreetTest {
 
@@ -22,7 +18,7 @@ public class GreetTest {
         greet.greet("me", "Xhosa");
         greet.greet("anotherMe", "Venda");
 
-        assertEquals("Hallo me", greet.greet("me", "Afrikaans"));
+        assertEquals("Hallo, me", greet.greet("me", "Afrikaans"));
     }
     @Test
     public void shouldReturnGreetedUserNames() {
@@ -100,34 +96,4 @@ public class GreetTest {
 
         assertEquals("Valid commands are:\ngreet\ngreeted\ncount\nclear\nhelp\nexit\n", greet.help());
     }
-
-    final String DATABASE_LINK = "jdbc:h2:./target/userNames_db";
-    @Test
-    public void someMethod() {
-        Greet greet = new Greet("name", Language.xhosa);
-        try {
-            forName("org.h2.Driver");
-            Connection connection = DriverManager.getConnection(DATABASE_LINK);
-
-            Statement statement = connection.createStatement();
-            final String INSERT_NAME = "insert into people (name) values (?)";
-
-            PreparedStatement addName = connection.prepareStatement(INSERT_NAME);
-
-            addName.setString(1, "sandiso");
-            addName.execute();
-            addName.setString(1, "me");
-            addName.execute();
-
-            ResultSet res = connection.createStatement().executeQuery("select * from people w");
-        }
-        catch (Exception e) {
-            fail(e);
-        }
-    }
-
-//    @Test
-//    public void shouldAddNames() {
-//
-//    }
 }

@@ -2,17 +2,20 @@ package net;
 
 import net.greet.DataBaseMethods;
 import net.greet.*;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DataBaseMethodsTest {
+    @BeforeEach
+
     @Test
-    public void shouldAddName() {
+    public void shouldAddAndGreetPerson() {
         DataBaseMethods dataBaseMethods = new DataBaseMethods();
 
         dataBaseMethods.greetingsDB();
-        assertEquals("Hello sandman",dataBaseMethods.greet("sandman", null));
+        assertEquals("Hello, sandman",dataBaseMethods.greet("sandman", null));
     }
 
     @Test
@@ -20,14 +23,31 @@ public class DataBaseMethodsTest {
         DataBaseMethods dataBaseMethods = new DataBaseMethods();
 
         dataBaseMethods.greetingsDB();
-        assertEquals(0, dataBaseMethods.greeted("madayi"));
+        assertEquals(5, dataBaseMethods.greeted("sandman"));
     }
 
     @Test
-    public void shouldClearName() {
+    public void tableSize() {
+        DataBaseMethods dataBaseMethods = new DataBaseMethods();
+
+        dataBaseMethods.greetingsDB();
+        System.out.println(dataBaseMethods.count());
+        assertEquals(1, dataBaseMethods.count());
+    }
+
+    @Test
+    public void shouldClearNameOrTable() {
         DataBaseMethods dataBaseMethods = new DataBaseMethods();
 
         dataBaseMethods.greetingsDB();
         dataBaseMethods.clear(null);
+    }
+
+    @Test
+    public void shouldReturnTable() {
+        DataBaseMethods dataBaseMethods = new DataBaseMethods();
+
+        dataBaseMethods.greetingsDB();
+        System.out.println(dataBaseMethods.table());
     }
 }

@@ -1,11 +1,9 @@
 package net.greet;
 
-import org.junit.Test;
-
 import java.sql.*;
 
-public class DataBaseMethods {
-    final String DATABASE_LINK = "jdbc:h2:./target/userNames_db";
+public class DataBaseMethods implements Greeting {
+    final String DATABASE_LINK = "jdbc:h2:./target/names_db";
     final String ADD_NAME = "insert into people (name, count) values (?, ?)";
     final String FIND_NAME = "select count from people where name = ?";
     final String UPDATE_NAME = "update people set count = ? where name = ?";
@@ -13,6 +11,9 @@ public class DataBaseMethods {
     final String DELETE_NAME = "delete from people where name = ?";
     final String DELETE_EVERYTHING = "delete from people";
     final String TABLE_SIZE = "select count(*) from people";
+
+    private static final String GREEN = "\033[0;32m";
+    private static final String RESET = "\033[0m";
 
     Connection connection;
     PreparedStatement addName;
@@ -26,7 +27,7 @@ public class DataBaseMethods {
     public void greetingsDB() {
         try {
             Class.forName("org.h2.Driver");
-            connection = DriverManager.getConnection(DATABASE_LINK);
+            connection = DriverManager.getConnection(DATABASE_LINK, "sa", "");
 
             addName = connection.prepareStatement(ADD_NAME);
             findName = connection.prepareStatement(FIND_NAME);
@@ -41,7 +42,7 @@ public class DataBaseMethods {
         }
     }
 
-    public String greet(String name, Language language) {
+    public String greet(String name, String language) {
         try {
             findName.setString(1, name);
             ResultSet resultSet = findName.executeQuery();
@@ -56,52 +57,83 @@ public class DataBaseMethods {
                 addName.setInt(2, 1);
                 addName.execute();
             }
-            return Language.valueOf(language.toString()).getGreeting() + " " + name;
+            return Language.valueOf(language).getGreeting() + name;
         }
         catch (Exception e) {
-            return Language.valueOf("english").getGreeting() + " " + name;
+            return Language.valueOf("english").getGreeting() + name;
         }
     }
 
-    public int greeted(String name) {
+
+    public String greeted(String name) {
         try {
             findName.setString(1, name);
             ResultSet resultSet = findName.executeQuery();
-            if (resultSet.next()) {
-                return resultSet.getInt("count");
+            if (!name.equals(null)) {
+                return name + "has been greeted " + (resultSet.getInt("count")) + " time(s)";
             }
-            return 0;
+            else {
+                return "0";
+            }
         }
         catch (SQLException e) {
-            e.printStackTrace();
-            return 0;
+//            e.printStackTrace();
+            return "Exception caught";
         }
     }
 
-    public void clear(String name) {
+    public String counter() {
+        return null;
+    }
+
+    public String clear(String name) {
         try {
             if (!name.equals(null)) {
                 deleteName.setString(1, name);
-                deleteName.execute();
+                deleteName.executeUpdate();
             }
             else {
-                deleteEverything.execute();
+                deleteEverything.executeUpdate();
             }
         }
         catch (SQLException e) {
             e.printStackTrace();
         }
+        return name + " cleared!";
+    }
+
+    public String help() {
+        return GREEN + "Valid commands are:\ngreet\ngreeted\ncount\nclear\nhelp\nexit\n" + RESET;
     }
 
     public int count(String name) {
         try {
             findName.setString(1, name);
             ResultSet resultSet = findName.executeQuery();
-            int nameCount = resultSet.getInt("count");
-            return nameCount;
+            return resultSet.getInt("count");
         }
         catch (SQLException e) {
             return 0;
+        }
+    }
+
+    public String count() {
+        try {
+            return tableSize.executeQuery().toString();
+        }
+        catch (SQLException e) {
+            return "Database is empty";
+        }
+    }
+
+    public String table() {
+        try {
+            ResultSet resultSet = returnTable.executeQuery();
+            return resultSet.toString();
+        }
+        catch (SQLException e) {
+            e.printStackTrace();
+            return returnTable.toString();
         }
     }
 }
