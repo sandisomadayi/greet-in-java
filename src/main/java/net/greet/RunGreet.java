@@ -10,8 +10,13 @@ public class RunGreet {
 
     public static void main(String[] args) {
 
-        Greeting greeting = new Greet("", Language.xhosa);
-//        Greeting greeting = new DataBaseMethods();
+//        Greeting greeting = new Greet("", Language.xhosa);
+        Greeting greeting = new JDBCGreet();
+
+//        JDBCGreet jdbcGreet = new JDBCGreet();
+//
+//        System.out.println(jdbcGreet.greet("sandman", "venda"));
+//        System.out.println(jdbcGreet.greeted("sandman"));
 
         Scanner scanner = new Scanner(System.in);
 
