@@ -7,37 +7,34 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class JDBCGreetTest {
-//    @BeforeEach
+
 
     @Test
     public void shouldAddAndGreetPerson() {
-        JDBCGreet JDBCGreet = new JDBCGreet();
+        JDBCGreet jdbcGreet = new JDBCGreet();
 
-        assertEquals("Molo, sandman", JDBCGreet.greet("sandman", "xhosa"));
+        assertEquals("Molo, me", jdbcGreet.greet("me", "xhosa"));
     }
 
     @Test
     public void userNameGreetCount() {
-        JDBCGreet JDBCGreet = new JDBCGreet();
+        JDBCGreet jdbcGreet = new JDBCGreet();
 
-
-        assertEquals("{sandman=18,him=1}", JDBCGreet.greeted(null));
+        assertEquals("{her=1, me=1, sandman=2, them=1, him=1, sandiso=1}", jdbcGreet.greeted(null));
     }
 
     @Test
     public void tableSize() {
-        JDBCGreet JDBCGreet = new JDBCGreet();
+        JDBCGreet jdbcGreet = new JDBCGreet();
 
-
-//        System.out.println(JDBCGreet.count());
-        assertEquals(1, JDBCGreet.count(null));
+        jdbcGreet.greeted(null);
+        assertEquals("names greeted: 2", jdbcGreet.counter());
     }
 
     @Test
     public void shouldClearNameOrTable() {
-        JDBCGreet JDBCGreet = new JDBCGreet();
+        JDBCGreet jdbcGreet = new JDBCGreet();
 
-
-        assertEquals("", JDBCGreet.clear(null));
+        assertEquals("All names deleted!", jdbcGreet.clear("me"));
     }
 }

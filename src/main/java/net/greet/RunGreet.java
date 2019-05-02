@@ -15,9 +15,7 @@ public class RunGreet {
 
 //        JDBCGreet jdbcGreet = new JDBCGreet();
 //
-//        System.out.println(jdbcGreet.greet("sandman", "venda"));
-//        System.out.println(jdbcGreet.greeted("sandman"));
-
+//        System.out.println(jdbcGreet.greeted(null));
         Scanner scanner = new Scanner(System.in);
 
         while (true) {

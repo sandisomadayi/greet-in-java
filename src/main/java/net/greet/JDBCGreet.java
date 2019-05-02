@@ -7,7 +7,7 @@ import java.util.Map;
 public class JDBCGreet implements Greeting {
     final String DATABASE_LINK = "jdbc:h2:./target/names_db";
     final String ADD_NAME = "insert into people (name, counter) values (?, ?)";
-    final String FIND_NAME = "select * from people";
+    final String FIND_NAME = "select * from people where name = ?";
     final String UPDATE_NAME = "update people set counter = counter + 1 where name = ?";
     final String RETURN_TABLE = "select * from people";
     final String DELETE_NAME = "delete from people where name = ?";
@@ -40,8 +40,10 @@ public class JDBCGreet implements Greeting {
             deleteName = connection.prepareStatement(DELETE_NAME);
             deleteEverything = connection.prepareStatement(DELETE_EVERYTHING);
             tableSize = connection.prepareStatement(TABLE_SIZE);
+            System.out.println("connected to database");
         }
         catch (Exception e) {
+            System.out.println("failed to connect");
             e.printStackTrace();
         }
     }
@@ -70,49 +72,48 @@ public class JDBCGreet implements Greeting {
 
 
     public String greeted(String name) {
+        Map<String, Integer> userNames = new HashMap<>();
+
         try {
-//            findName.setString(1, name);
-            ResultSet resultSet = findName.executeQuery();
-            System.out.println(resultSet.next());
+            ResultSet resultSet = returnTable.executeQuery();
             while (resultSet.next()) {
                 userNames.put(resultSet.getString("name"), resultSet.getInt("counter"));
             }
 
-
             if (!name.equals(null)) {
-                System.out.println("if");
                 return name + " has been greeted " + userNames.get(name) + " time(s)";
             }
             return userNames.toString();
         }
-        catch (SQLException e) {
-//            e.printStackTrace();
+        catch (Exception e) {
             return userNames.toString();
-//            return "Exception caught";
         }
 
 
-    }
-
-    public String counter() {
-        return "number of names greeted: " + userNames.size();
     }
 
     public String clear(String name) {
+        Map<String, Integer> userNames = new HashMap<>();
         try {
-            if (!name.equals(null)) {
-                deleteName.setString(1, name);
-                deleteName.executeUpdate();
-                return name + " deleted!";
+            deleteName.setString(1, name);
+//            System.out.println(deleteName.executeUpdate());
+            ResultSet resultSet = returnTable.executeQuery();
+            while (resultSet.next()) {
+                userNames.put(resultSet.getString("name"), resultSet.getInt("counter"));
             }
-            else {
+            if (deleteName.executeUpdate() == 0) {
                 deleteEverything.executeUpdate();
-                return "All names deleted";
+                return "All names deleted!";
             }
+//            else {
+
+                return name + " deleted!";
+//            }
         }
-        catch (SQLException e) {
+        catch (Exception e) {
             e.printStackTrace();
-            return name + " deleted!";
+//            return "All names deleted!";
+            return "exception";
         }
     }
 
@@ -120,14 +121,18 @@ public class JDBCGreet implements Greeting {
         return GREEN + "Valid commands are:\ngreet - with a name will greet the person in a specified language\ngreeted - shows how many times a person was greeted\ncount - shows how many people were greeted\nclear - deletes a name or all names that were greeted\nhelp - displays commands to use\nexit - exits the application" + RESET;
     }
 
-    public int count(String name) {
+    public String counter() {
+        Map<String, Integer> userNames = new HashMap<>();
         try {
-            findName.setString(1, name);
-            ResultSet resultSet = findName.executeQuery();
-            return resultSet.getInt("count");
+
+            ResultSet resultSet = returnTable.executeQuery();
+            while (resultSet.next()) {
+                userNames.put(resultSet.getString("name"), resultSet.getInt("counter"));
+            }
+            return "names greeted: " + userNames.size();
         }
-        catch (SQLException e) {
-            return 0;
+        catch (Exception e) {
+            return "names greeted: " + userNames.size();
         }
     }
 }
