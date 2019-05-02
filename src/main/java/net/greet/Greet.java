@@ -48,7 +48,7 @@ public class Greet implements Greeting {
                 return userNameMap.toString();
 
             } else {
-                return PURPLE + "user name " + userName + " was greeted " + userNameMap.get(userName) + " time(s)" + RESET;
+                return PURPLE + userName + " was greeted " + userNameMap.get(userName) + " time(s)" + RESET;
             }
         }
         catch (NullPointerException e) {
@@ -83,7 +83,7 @@ public class Greet implements Greeting {
     }
 
     public String help () {
-        return GREEN + "Valid commands are:\ngreet\ngreeted\ncount\nclear\nhelp\nexit\n" + RESET;
+        return GREEN + "Valid commands are:\ngreet - with a name will greet the person in a specified language\ngreeted - shows how many times a person was greeted\ncount - shows how many people were greeted\nclear - deletes a name or all names that were greeted\nhelp - displays commands to use\nexit - exits the application" + RESET;
     }
 
 }
