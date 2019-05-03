@@ -44,7 +44,7 @@ public class GreetTest {
         greet.greet("anotherMe", "Venda");
 
 
-        assertEquals("user name sandiso was greeted 2 time(s)", greet.greeted("sandiso"));
+        assertEquals("sandiso was greeted 2 time(s)", greet.greeted("sandiso"));
     }
 
     @Test
@@ -58,7 +58,7 @@ public class GreetTest {
         greet.greet("anotherMe", "Venda");
 
 
-        assertEquals("number of name(s) greeted 4", greet.counter());
+        assertEquals("name(s) greeted 4", greet.counter());
     }
 
     @Test
@@ -73,7 +73,7 @@ public class GreetTest {
 
         greet.clear(null);
         //System.out.println(greet.counter());
-        assertEquals("number of name(s) greeted 0", greet.counter());
+        assertEquals("name(s) greeted 0", greet.counter());
     }
 
     @Test
@@ -94,6 +94,6 @@ public class GreetTest {
     public void shouldReturnAllCommands() {
         Greet greet = new Greet("sandman", Language.xhosa);
 
-        assertEquals("Valid commands are:\ngreet\ngreeted\ncount\nclear\nhelp\nexit\n", greet.help());
+        assertEquals("Valid commands are:\ngreet - with a name will greet the person in a specified language\ngreeted - shows how many times a person was greeted\ncount - shows how many people were greeted\nclear - deletes a name or all names that were greeted\nhelp - displays commands to use\nexit - exits the application", greet.help());
     }
 }
