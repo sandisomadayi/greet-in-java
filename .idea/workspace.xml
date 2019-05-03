@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12196e09-662c-4a96-8d21-63e50e1eb379" name="Default Changelist" comment="" />
+    <list default="true" id="12196e09-662c-4a96-8d21-63e50e1eb379" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,11 +28,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
               <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="137" selection-start-line="3" selection-start-column="137" selection-end-line="3" selection-end-column="137" />
             </state>
           </provider>
         </entry>
@@ -141,6 +152,7 @@
         <option value="$PROJECT_DIR$/src/test/java/net/GreetTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/Greet.java" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -151,7 +163,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="59" />
     <option name="y" value="25" />
     <option name="width" value="654" />
@@ -396,10 +408,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="59" y="25" width="1307" height="743" extended-state="7" />
-    <editor active="true" />
+    <frame x="59" y="25" width="1307" height="743" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49674267" visible="true" weight="0.24345757" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49674267" visible="true" weight="0.24345757" />
       <window_info id="Structure" order="1" sideWeight="0.50325733" side_tool="true" weight="0.35448056" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -416,7 +427,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32899022" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49960348" weight="0.6824104" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49960348" visible="true" weight="0.6824104" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5003965" side_tool="true" weight="0.28990227" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32899022" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3257329" />
@@ -591,6 +602,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="137" selection-start-line="3" selection-start-column="137" selection-end-line="3" selection-end-column="137" />
         </state>
       </provider>
     </entry>
