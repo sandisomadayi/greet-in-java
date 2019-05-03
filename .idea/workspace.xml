@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12196e09-662c-4a96-8d21-63e50e1eb379" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/greet-in-java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/greet-in-java.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_5_0_M1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_5_0_M1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/RunGreet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/RunGreet.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,20 +26,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/JDBCGreet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-280">
-              <caret line="59" column="23" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="23" />
+            <state relative-caret-position="1635">
+              <caret line="109" column="28" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.travis.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -49,7 +47,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/net/JDBCGreetTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
+            <state relative-caret-position="495">
               <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -61,12 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="645">
               <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-              <folding>
-                <element signature="e#1698#1699#0" expanded="true" />
-                <element signature="e#1777#1778#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -74,7 +68,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/net/GreetTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-81">
+            <state relative-caret-position="1065">
               <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
             </state>
           </provider>
@@ -83,8 +77,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/RunGreet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-251">
-              <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
+            <state relative-caret-position="-763">
+              <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="287">
+              <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -140,7 +143,6 @@
         <option value="$PROJECT_DIR$/src/main/java/net/greet/languages/Language.java" />
         <option value="$PROJECT_DIR$/src/main/resources/db/migration/V1__add_people.sql" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/Greeter.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/net/DataBaseMethodsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/DataBaseMethods.java" />
         <option value="$PROJECT_DIR$/src/main/resources/db/migration/V2__add_people.sql" />
@@ -148,11 +150,12 @@
         <option value="$PROJECT_DIR$/src/main/java/net/greet/Greeting.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/JDBCGreet.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/JDBCGreetTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/greet/RunGreet.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/GreetTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/Greet.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/net/greet/RunGreet.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -163,7 +166,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="59" />
     <option name="y" value="25" />
     <option name="width" value="1307" />
@@ -177,6 +180,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -250,7 +254,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -275,7 +278,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.greet-in-java-1.0-SNAPSHOT.jar">
+  <component name="RunManager" selected="Application.RunGreet">
+    <configuration name="RunGreet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="net.greet.RunGreet" />
+      <module name="greet-in-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.greet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JDBCGreetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="greet-in-java" />
       <extension name="coverage">
@@ -323,33 +339,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JDBCGreetTest.shouldShowHowManyTimesUserWasGreeted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="greet-in-java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="net" />
-      <option name="MAIN_CLASS_NAME" value="net.JDBCGreetTest" />
-      <option name="METHOD_NAME" value="shouldShowHowManyTimesUserWasGreeted" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="greet-in-java-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/target/greet-in-java-1.0-SNAPSHOT.jar" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RunGreet" />
         <item itemvalue="JAR Application.greet-in-java-1.0-SNAPSHOT.jar" />
         <item itemvalue="JUnit.JDBCGreetTest" />
         <item itemvalue="JUnit.JDBCGreetTest.shouldClearName" />
         <item itemvalue="JUnit.JDBCGreetTest.shouldReturnNumberOfNamesGreeted" />
-        <item itemvalue="JUnit.JDBCGreetTest.shouldShowHowManyTimesUserWasGreeted" />
       </list>
     </recent_temporary>
   </component>
@@ -408,10 +408,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="59" y="25" width="1307" height="743" extended-state="6" />
+    <frame x="59" y="25" width="1307" height="743" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49674267" visible="true" weight="0.24345757" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49674267" visible="true" weight="0.24742268" />
       <window_info id="Structure" order="1" sideWeight="0.50325733" side_tool="true" weight="0.35448056" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -423,12 +423,12 @@
       <window_info id="Job Explorer" order="9" weight="0.3298969" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960348" weight="0.31270358" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960348" visible="true" weight="0.39413682" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39739415" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32899022" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49960348" visible="true" weight="0.25407165" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49960348" weight="0.2801303" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5003965" side_tool="true" weight="0.28990227" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32899022" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3257329" />
@@ -481,13 +481,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greeter.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1__create_people.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -540,20 +533,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Language.java">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        <state relative-caret-position="45">
+          <caret line="3" column="137" selection-start-line="3" selection-start-column="137" selection-end-line="3" selection-end-column="137" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/net/JDBCGreetTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
+        <state relative-caret-position="495">
           <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/net/GreetTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -564,45 +571,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/net/GreetTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Language.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-81">
-          <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-          <folding>
-            <element signature="e#1698#1699#0" expanded="true" />
-            <element signature="e#1777#1778#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/RunGreet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-251">
-          <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/JDBCGreet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-280">
-          <caret line="59" column="23" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="137" selection-start-line="3" selection-start-column="137" selection-end-line="3" selection-end-column="137" />
+        <state relative-caret-position="165">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -610,6 +582,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/JDBCGreet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1635">
+          <caret line="109" column="28" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/RunGreet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-763">
+          <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
         </state>
       </provider>
     </entry>

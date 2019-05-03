@@ -67,6 +67,7 @@ public class RunGreet {
                         System.out.println(greeting.clear(null));
                     }
                 }
+
                 else {
                     System.out.println(RED +"Invalid command!" + RESET);
                     System.out.println(GREEN + greeting.help() + RESET);
