@@ -17,7 +17,6 @@ public class JDBCGreet implements Greeting {
     private static final String GREEN = "\033[0;32m";
     private static final String RESET = "\033[0m";
 
-    Map<String, Integer> userNames = new HashMap<>();
 
     Connection connection;
     PreparedStatement addName;
@@ -40,10 +39,8 @@ public class JDBCGreet implements Greeting {
             deleteName = connection.prepareStatement(DELETE_NAME);
             deleteEverything = connection.prepareStatement(DELETE_EVERYTHING);
             tableSize = connection.prepareStatement(TABLE_SIZE);
-            System.out.println("connected to database");
         }
         catch (Exception e) {
-            System.out.println("failed to connect");
             e.printStackTrace();
         }
     }
@@ -52,9 +49,8 @@ public class JDBCGreet implements Greeting {
         try {
             findName.setString(1, name);
             ResultSet resultSet = findName.executeQuery();
+
             if (resultSet.next()) {
-//                int userNameCount = resultSet.getInt("count");
-//                updateName.setInt(1, ++userNameCount);
                 updateName.setString(1, name);
                 updateName.execute();
             }
@@ -63,6 +59,7 @@ public class JDBCGreet implements Greeting {
                 addName.setInt(2, 1);
                 addName.execute();
             }
+
             return Language.valueOf(language).getGreeting() + name;
         }
         catch (Exception e) {
@@ -94,21 +91,24 @@ public class JDBCGreet implements Greeting {
 
     public String clear(String name) {
         Map<String, Integer> userNames = new HashMap<>();
+
         try {
             deleteName.setString(1, name);
-//            System.out.println(deleteName.executeUpdate());
+            int deleteNameStatus = deleteName.executeUpdate();
             ResultSet resultSet = returnTable.executeQuery();
+
             while (resultSet.next()) {
                 userNames.put(resultSet.getString("name"), resultSet.getInt("counter"));
             }
-            if (deleteName.executeUpdate() == 0) {
+
+            if (deleteNameStatus == 0) {
                 deleteEverything.executeUpdate();
                 return "All names deleted!";
             }
-//            else {
+            else {
 
                 return name + " deleted!";
-//            }
+            }
         }
         catch (Exception e) {
             e.printStackTrace();
