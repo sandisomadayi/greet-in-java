@@ -1,6 +1,7 @@
 package net.greet;
 
 
+import javax.management.relation.RelationServiceNotRegisteredException;
 import java.util.Scanner;
 
 public class RunGreet {
@@ -37,7 +38,7 @@ public class RunGreet {
                     System.out.println(YELLOW + greeting.help() + RESET);
                 }
                 else if (command.equals("count")) {
-                    System.out.println(CYAN + greeting.counter() + RESET);
+                    System.out.println(PURPLE + greeting.counter() + RESET);
                 }
                 else if (command.equals("greeted")) {
                     try {
@@ -46,7 +47,7 @@ public class RunGreet {
                             System.out.println(BLUE+ greeting.greeted(null) + RESET);
                         }
                         else {
-                            System.out.println(CYAN + greeting.greeted(name) + RESET);
+                            System.out.println(BLUE + greeting.greeted(name) + RESET);
                         }
                     }
                     catch (ArrayIndexOutOfBoundsException e) {
@@ -64,7 +65,7 @@ public class RunGreet {
                             System.out.println(RED + greeting.clear(name) + RESET);
                         }
                     }catch (ArrayIndexOutOfBoundsException e) {
-                        System.out.println(greeting.clear(null));
+                        System.out.println(RED + greeting.clear(null) + RESET);
                     }
                 }
 
@@ -76,13 +77,13 @@ public class RunGreet {
             else if (inputs.length == 2) {
                 String name = inputs[1].toLowerCase();
                 if (command.equals("greet")) {
-                    System.out.println(greeting.greet(name, "english"));
+                    System.out.println(YELLOW + greeting.greet(name, "english") + RESET);
                 }
                 else if (command.equals("clear")) {
-                    greeting.clear(name);
+                    System.out.println(RED + greeting.clear(name) + RESET);
                 }
                 else if (command.equals("greeted")) {
-                    System.out.println(greeting.greeted(name));
+                    System.out.println(CYAN + greeting.greeted(name) + RESET);
                 }
                 else {
                     System.out.println(RED +"Invalid command!" + RESET);

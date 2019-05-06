@@ -77,6 +77,10 @@ public class JDBCGreet implements Greeting {
                 userNames.put(resultSet.getString("name"), resultSet.getInt("counter"));
             }
 
+            for (Map.Entry<String, Integer> entry:userNames.entrySet()) {
+                System.out.println(entry.getKey() + ":  " + entry.getValue());
+            }
+
             if (!name.equals(null)) {
                 return name + " has been greeted " + userNames.get(name) + " time(s)";
             }
@@ -90,30 +94,31 @@ public class JDBCGreet implements Greeting {
     }
 
     public String clear(String name) {
-        Map<String, Integer> userNames = new HashMap<>();
+//        Map<String, Integer> userNames = new HashMap<>();
 
         try {
             deleteName.setString(1, name);
             int deleteNameStatus = deleteName.executeUpdate();
             ResultSet resultSet = returnTable.executeQuery();
 
-            while (resultSet.next()) {
-                userNames.put(resultSet.getString("name"), resultSet.getInt("counter"));
-            }
+//            while (resultSet.next()) {
+//                userNames.put(resultSet.getString("name"), resultSet.getInt("counter"));
+//            }
 
             if (deleteNameStatus == 0) {
                 deleteEverything.executeUpdate();
                 return "All names deleted!";
             }
             else {
-
                 return name + " deleted!";
             }
+
+
         }
         catch (Exception e) {
             e.printStackTrace();
 //            return "All names deleted!";
-            return "exception";
+            return name + " deleted!";
         }
     }
 

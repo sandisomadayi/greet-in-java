@@ -8,10 +8,15 @@ public enum  Language {
     english("Hello, "),
     afrikaans("Hallo, "),
     pedi("Thobela, "),
-    tswana(""),
+    tswana("Dumela, "),
     tsonga("Avuxeni, "),
-    swati(""),
-    ndebele("Lotjhani, ");
+    swati("Sawubona, "),
+    ndebele("Lotjhani, "),
+    french("Bonjour, "),
+    portuguese("Olá"),
+    spanish("Hola, "),
+    chinese("Nǐ hǎo, "),
+    japanese("Kon'nichiwa");
 
     private String greeting;
     Language(String greeting) {
