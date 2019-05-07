@@ -10,10 +10,10 @@ public class Greet implements Greeting {
 
     private Map<String, Integer> userNameMap = new HashMap<>();
 
-    public Greet(String userName, Language language) {
-        this.userName = userName;
-        this.language = language;
-    }
+//    public Greet(String userName, Language language) {
+//        this.userName = userName;
+//        this.language = language;
+//    }
 
     public String greet (String userName, String language) {
 //        System.out.println(Language.valueOf("inputs[1]").getGreeting() + ", " + userName);
@@ -24,6 +24,7 @@ public class Greet implements Greeting {
         }
 
         try {
+            System.out.println(language);
             return Language.valueOf(language.toLowerCase()).getGreeting() + userName;
         }catch (IllegalArgumentException e) {
             return Language.valueOf("english").getGreeting() + " " + userName;

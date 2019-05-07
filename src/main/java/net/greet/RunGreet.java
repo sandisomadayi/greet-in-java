@@ -1,7 +1,5 @@
 package net.greet;
 
-
-import javax.management.relation.RelationServiceNotRegisteredException;
 import java.util.Scanner;
 
 public class RunGreet {
@@ -18,93 +16,98 @@ public class RunGreet {
 
 //        Greeting greeting = new Greet("", Language.xhosa);
         Greeting greeting = new JDBCGreet();
-
-//        JDBCGreet jdbcGreet = new JDBCGreet();
-//
-//        System.out.println(jdbcGreet.greeted(null));
         Scanner scanner = new Scanner(System.in);
+
+        Greet greet = new Greet();
+        Processor processor = new Processor(greeting, greet);
 
         while (true) {
             System.out.println("Enter a command");
             String input = scanner.nextLine();
-            String[] inputs = input.split(" ");
-            String command = inputs[0].toLowerCase();
+            AcceptCommands acceptCommands = new AcceptCommands(input);
 
-            if (inputs.length == 1) {
-                if (command.equals("exit")) {
-                    break;
-                }
-                else if (command.equals("help")) {
-                    System.out.println(YELLOW + greeting.help() + RESET);
-                }
-                else if (command.equals("count")) {
-                    System.out.println(PURPLE + greeting.counter() + RESET);
-                }
-                else if (command.equals("greeted")) {
-                    try {
-                        String name = inputs[1].toLowerCase();
-                        if (name.equals(null)) {
-                            System.out.println(BLUE+ greeting.greeted(null) + RESET);
-                        }
-                        else {
-                            System.out.println(BLUE + greeting.greeted(name) + RESET);
-                        }
-                    }
-                    catch (ArrayIndexOutOfBoundsException e) {
+            if(acceptCommands.getCommand().equals("exit")){
+                break;
+            }else
+                System.out.println(processor.processCommands(acceptCommands));
+//            String[] inputs = input.split(" ");
+//            String command = inputs[0].toLowerCase();
+//
+//            if (inputs.length == 1) {
+//                if (command.equals("exit")) {
+//                    break;
+//                }
+//                else if (command.equals("help")) {
+//                    System.out.println(YELLOW + greeting.help() + RESET);
+//                }
+//                else if (command.equals("count")) {
+//                    System.out.println(PURPLE + greeting.counter() + RESET);
+//                }
+//                else if (command.equals("greeted")) {
+//                    try {
 //                        String name = inputs[1].toLowerCase();
-                        System.out.println(BLUE + greeting.greeted(null) + RESET);
-                    }
-                }
-                else if (command.equals("clear")) {
-                    try {
-                        String name = inputs[1].toLowerCase();
-                        if (name.equals(null)) {
-                            System.out.println(RED + greeting.clear(null) + RESET);
-                        }
-                        else {
-                            System.out.println(RED + greeting.clear(name) + RESET);
-                        }
-                    }catch (ArrayIndexOutOfBoundsException e) {
-                        System.out.println(RED + greeting.clear(null) + RESET);
-                    }
-                }
-
-                else {
-                    System.out.println(RED +"Invalid command!" + RESET);
-                    System.out.println(GREEN + greeting.help() + RESET);
-                }
-            }
-            else if (inputs.length == 2) {
-                String name = inputs[1].toLowerCase();
-                if (command.equals("greet")) {
-                    System.out.println(YELLOW + greeting.greet(name, "english") + RESET);
-                }
-                else if (command.equals("clear")) {
-                    System.out.println(RED + greeting.clear(name) + RESET);
-                }
-                else if (command.equals("greeted")) {
-                    System.out.println(CYAN + greeting.greeted(name) + RESET);
-                }
-                else {
-                    System.out.println(RED +"Invalid command!" + RESET);
-                    System.out.println(GREEN + greeting.help() + RESET);
-                }
-            }
-            else if (inputs.length == 3) {
-                if (command.equals("greet")) {
-                    String name = inputs[1].toLowerCase();
-                    String language = inputs[2].toLowerCase();
-                    System.out.println(YELLOW + greeting.greet(name, language) + RESET);
-                }
-                else {
-                    System.out.println(RED +"Invalid command!" + RESET);
-                    System.out.println(GREEN + greeting.help() + RESET);
-                }
-            }
-            else {
-                System.out.println(RED +"Invalid command!" + RESET);
-                System.out.println(GREEN + greeting.help() + RESET);
-            }
+//                        if (name.equals(null)) {
+//                            System.out.println(BLUE+ greeting.greeted(null) + RESET);
+//                        }
+//                        else {
+//                            System.out.println(BLUE + greeting.greeted(name) + RESET);
+//                        }
+//                    }
+//                    catch (ArrayIndexOutOfBoundsException e) {
+////                        String name = inputs[1].toLowerCase();
+//                        System.out.println(BLUE + greeting.greeted(null) + RESET);
+//                    }
+//                }
+//                else if (command.equals("clear")) {
+//                    try {
+//                        String name = inputs[1].toLowerCase();
+//                        if (name.equals(null)) {
+//                            System.out.println(RED + greeting.clear(null) + RESET);
+//                        }
+//                        else {
+//                            System.out.println(RED + greeting.clear(name) + RESET);
+//                        }
+//                    }catch (ArrayIndexOutOfBoundsException e) {
+//                        System.out.println(RED + greeting.clear(null) + RESET);
+//                    }
+//                }
+//
+//                else {
+//                    System.out.println(RED +"Invalid command!" + RESET);
+//                    System.out.println(GREEN + greeting.help() + RESET);
+//                }
+//            }
+//            else if (inputs.length == 2) {
+//                String name = inputs[1].toLowerCase();
+//                if (command.equals("greet")) {
+//                    System.out.println(YELLOW + greeting.greet(name, "english") + RESET);
+//                }
+//                else if (command.equals("clear")) {
+//                    System.out.println(RED + greeting.clear(name) + RESET);
+//                }
+//                else if (command.equals("greeted")) {
+//                    System.out.println(CYAN + greeting.greeted(name) + RESET);
+//                }
+//                else {
+//                    System.out.println(RED +"Invalid command!" + RESET);
+//                    System.out.println(GREEN + greeting.help() + RESET);
+//                }
+//            }
+//            else if (inputs.length == 3) {
+//                if (command.equals("greet")) {
+//                    String name = inputs[1].toLowerCase();
+//                    String language = inputs[2].toLowerCase();
+//                    System.out.println(YELLOW + greeting.greet(name, language) + RESET);
+//                }
+//                else {
+//                    System.out.println(RED +"Invalid command!" + RESET);
+//                    System.out.println(GREEN + greeting.help() + RESET);
+//                }
+//            }
+//            else {
+//                System.out.println(RED +"Invalid command!" + RESET);
+//                System.out.println(GREEN + greeting.help() + RESET);
+//            }
         }
     }
 }

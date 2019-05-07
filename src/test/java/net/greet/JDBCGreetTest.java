@@ -1,6 +1,7 @@
-package net;
+package net.greet;
 
 import net.greet.JDBCGreet;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -17,6 +18,12 @@ public class JDBCGreetTest {
         jdbcGreet.greet("madayi", "tsonga");
     }
 
+//    @AfterAll
+//    static void shouldDeleteAllNamesFromTable() {
+//        JDBCGreet jdbcGreet = new JDBCGreet();
+//
+//        jdbcGreet.clear(null);
+//    }
     @Test
     public void shouldAddAndGreetPerson() {
         JDBCGreet jdbcGreet = new JDBCGreet();
