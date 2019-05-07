@@ -11,9 +11,15 @@ public class AcceptCommands {
 
     public void splitInput() {
         inputSplit = input.split(" ");
-        command = inputSplit[0].toLowerCase();
-        userName = inputSplit[1].toLowerCase();
-        language = inputSplit[2].toLowerCase();
+        try {
+            command = inputSplit[0].toLowerCase();
+            userName = inputSplit[1].toLowerCase();
+            language = inputSplit[2].toLowerCase();
+        }
+        catch (NullPointerException e) {
+            userName = null;
+            language = null;
+        }
     }
 
     public String getCommand() {
