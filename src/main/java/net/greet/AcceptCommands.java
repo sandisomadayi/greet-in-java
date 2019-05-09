@@ -5,20 +5,28 @@ public class AcceptCommands {
     private String[] inputSplit;
 
     public AcceptCommands(String inputFromUser) {
-        input = inputFromUser;
+        this.input = inputFromUser;
         splitInput();
     }
 
     public void splitInput() {
-        inputSplit = input.split(" ");
         try {
-            command = inputSplit[0].toLowerCase();
-            userName = inputSplit[1].toLowerCase();
-            language = inputSplit[2].toLowerCase();
+            inputSplit = input.split(" ");
+            if(inputSplit.length == 1) {
+                command = inputSplit[0].toLowerCase();
+            }
+            else if (inputSplit.length == 2) {
+                command = inputSplit[0].toLowerCase();
+                userName = inputSplit[1].toLowerCase();
+            }
+            else if (inputSplit.length == 3) {
+                command = inputSplit[0].toLowerCase();
+                userName = inputSplit[1].toLowerCase();
+                language = inputSplit[2].toLowerCase();
+            }
         }
-        catch (NullPointerException e) {
-            userName = null;
-            language = null;
+        catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
