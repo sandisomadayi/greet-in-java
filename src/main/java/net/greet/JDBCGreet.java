@@ -14,10 +14,6 @@ public class JDBCGreet implements Greeting {
     final String DELETE_EVERYTHING = "delete from people";
     final String TABLE_SIZE = "select count(*) as counter from people";
 
-    private static final String GREEN = "\033[0;32m";
-    private static final String RESET = "\033[0m";
-
-
     Connection connection;
     PreparedStatement addName;
     PreparedStatement findName;
@@ -77,14 +73,22 @@ public class JDBCGreet implements Greeting {
                 userNames.put(resultSet.getString("name"), resultSet.getInt("counter"));
             }
 
-            if (!name.equals(null)) {
-                return name + " has been greeted " + userNames.get(name) + " time(s)";
-            }
-
             for (Map.Entry<String, Integer> entry:userNames.entrySet()) {
                 System.out.println(entry.getKey() + ":  " + entry.getValue());
             }
+
+
+            if (!name.equals(null)) {
+                if (userNames.containsKey(name)) {
+                    return name + " has been greeted " + userNames.get(name) + " time(s)";
+                }
+                else {
+                    return name + " has not been greeted, try greeting it first.";
+                }
+            }
+
             return userNames.toString();
+
         }
         catch (Exception e) {
             return userNames.toString();
@@ -97,33 +101,37 @@ public class JDBCGreet implements Greeting {
         Map<String, Integer> userNames = new HashMap<>();
 
         try {
-            deleteName.setString(1, name);
-            int deleteNameStatus = deleteName.executeUpdate();
             ResultSet resultSet = returnTable.executeQuery();
 
             while (resultSet.next()) {
                 userNames.put(resultSet.getString("name"), resultSet.getInt("counter"));
             }
+            deleteName.setString(1, name);
+            deleteName.executeUpdate();
 
-            if (deleteNameStatus == 0) {
+            if (name == null) {
                 deleteEverything.executeUpdate();
                 return "All names deleted!";
             }
             else {
-                return name + " deleted!";
+                if (userNames.containsKey(name)) {
+                    return name + " deleted!";
+                }
+                else {
+                    return name + " has not been greeted, try greeting it first.";
+                }
             }
 
 
         }
         catch (Exception e) {
             e.printStackTrace();
-//            return "All names deleted!";
             return name + " deleted!";
         }
     }
 
     public String help() {
-        return GREEN + "Valid commands are:\ngreet - with a name will greet the person in a specified language\ngreeted - shows how many times a person was greeted\ncount - shows how many people were greeted\nclear - deletes a name or all names that were greeted\nhelp - displays commands to use\nexit - exits the application" + RESET;
+        return "Valid commands are:\ngreet - with a name will greet the person in a specified language\ngreeted - shows how many times a person was greeted\ncount - shows how many people were greeted\nclear - deletes a name or all names that were greeted\nhelp - displays commands to use\nexit - exits the application";
     }
 
     public String counter() {
