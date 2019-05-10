@@ -73,9 +73,9 @@ public class JDBCGreet implements Greeting {
                 userNames.put(resultSet.getString("name"), resultSet.getInt("counter"));
             }
 
-            for (Map.Entry<String, Integer> entry:userNames.entrySet()) {
-                System.out.println(entry.getKey() + ":  " + entry.getValue());
-            }
+//            for (Map.Entry<String, Integer> entry:userNames.entrySet()) {
+//                System.out.println(entry.getKey() + ":  " + entry.getValue());
+//            }
 
 
             if (!name.equals(null)) {
