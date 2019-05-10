@@ -1,7 +1,5 @@
 package net.greet;
 
-import net.greet.Greet;
-import net.greet.Language;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
