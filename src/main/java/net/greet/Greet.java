@@ -19,7 +19,7 @@ public class Greet implements Greeting {
 
         try {
             return Language.valueOf(language.toLowerCase()).getGreeting() + userName;
-        }catch (IllegalArgumentException e) {
+        }catch (Exception e) {
             return Language.valueOf("english").getGreeting() + " " + userName;
         }
 
@@ -34,10 +34,13 @@ public class Greet implements Greeting {
                 return userNameMap.toString();
 
             } else {
-                return userName + " was greeted " + userNameMap.get(userName) + " time(s)";
+                if (userNameMap.containsKey(userName)) {
+                    return userName + " was greeted " + userNameMap.get(userName) + " time(s)";
+                }
+                return userName + " has not been greeted, try greeting it first";
             }
         }
-        catch (NullPointerException e) {
+        catch (Exception e) {
             if (userNameMap.isEmpty()) {
                 return "no one is greeted";
             }
@@ -58,11 +61,14 @@ public class Greet implements Greeting {
                 return "All names deleted";
             }
             else {
-                userNameMap.remove(userName);
-                return userName + " removed from the map";
+                if (userNameMap.containsKey(userName)) {
+                    userNameMap.remove(userName);
+                    return userName + " removed from the map";
+                }
+                return userName + " has not been greeted, try greeting it first.";
             }
         }
-        catch (NullPointerException e) {
+        catch (Exception e) {
             userNameMap.remove(userName);
             return "All names deleted";
         }

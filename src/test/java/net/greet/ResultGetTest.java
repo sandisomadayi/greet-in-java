@@ -9,8 +9,7 @@ public class ResultGetTest {
     @Test
     void shouldDisplayMessage() {
         Greeting greeting = new JDBCGreet();
-        JDBCGreet jdbcGreet = new JDBCGreet();
-        Processor processor = new Processor(greeting, jdbcGreet);
+        Processor processor = new Processor(greeting);
         AcceptCommands acceptCommands = new AcceptCommands("exit me again");
         ResultGet resultGet = new ResultGet(processor.processCommands(acceptCommands));
 
@@ -19,8 +18,7 @@ public class ResultGetTest {
     @Test
     void shouldDisplayStatus() {
         Greeting greeting = new JDBCGreet();
-        JDBCGreet jdbcGreet = new JDBCGreet();
-        Processor processor = new Processor(greeting, jdbcGreet);
+        Processor processor = new Processor(greeting);
         AcceptCommands acceptCommands = new AcceptCommands("exit me again");
         ResultGet resultGet = new ResultGet(processor.processCommands(acceptCommands));
 
