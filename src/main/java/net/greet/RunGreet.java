@@ -18,14 +18,13 @@ public class RunGreet {
         while (menuStatus) {
             System.out.println("Enter a command");
             String input = scanner.nextLine();
-            AcceptCommands acceptCommands = new AcceptCommands(input);
 
-            if(acceptCommands.getCommand().equals("exit")){
-                break;
-            }
-            else {
-                System.out.println(processor.processCommands(acceptCommands));
-            }
+            AcceptCommands acceptCommands = new AcceptCommands(input);
+            ResultGet resultGet = new ResultGet(processor.processCommands(acceptCommands));
+
+            menuStatus = resultGet.getMenuStatus();
+
+            System.out.println(resultGet.getMessage());
         }
     }
 }

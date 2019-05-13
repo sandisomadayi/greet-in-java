@@ -13,6 +13,7 @@ public class ResultGetTest {
         Processor processor = new Processor(greeting, jdbcGreet);
         AcceptCommands acceptCommands = new AcceptCommands("exit me again");
         ResultGet resultGet = new ResultGet(processor.processCommands(acceptCommands));
+
         assertEquals("Good bye", resultGet.getMessage());
     }
     @Test
@@ -22,6 +23,7 @@ public class ResultGetTest {
         Processor processor = new Processor(greeting, jdbcGreet);
         AcceptCommands acceptCommands = new AcceptCommands("exit me again");
         ResultGet resultGet = new ResultGet(processor.processCommands(acceptCommands));
-        assertEquals(false,resultGet.getMenuStatus());
+
+        assertEquals(false, resultGet.getMenuStatus());
     }
 }

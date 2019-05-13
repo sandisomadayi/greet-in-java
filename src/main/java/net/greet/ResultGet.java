@@ -2,7 +2,7 @@ package net.greet;
 
 public class ResultGet {
     String message;
-    boolean menuStatus = true;
+    boolean menuStatus;
 
     public ResultGet(String message) {
         this.message = message;
