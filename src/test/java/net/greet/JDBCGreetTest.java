@@ -18,12 +18,6 @@ public class JDBCGreetTest {
         jdbcGreet.greet("madayi", "tsonga");
     }
 
-//    @AfterAll
-//    static void shouldDeleteAllNamesFromTable() {
-//        JDBCGreet jdbcGreet = new JDBCGreet();
-//
-//        jdbcGreet.clear(null);
-//    }
     @Test
     public void shouldAddAndGreetPerson() {
         JDBCGreet jdbcGreet = new JDBCGreet();

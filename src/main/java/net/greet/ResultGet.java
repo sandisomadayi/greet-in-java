@@ -2,11 +2,11 @@ package net.greet;
 
 public class ResultGet {
     String message;
-    boolean menuStatus;
+    boolean menuStatus = true;
 
-    public ResultGet(String message, boolean menuStatus) {
+    public ResultGet(String message) {
         this.message = message;
-        this.menuStatus = menuStatus;
+//        this.menuStatus = menuStatus;
 
         if (message.equals("Good bye")) {
             menuStatus = false;
