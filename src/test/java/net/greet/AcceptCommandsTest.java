@@ -14,7 +14,7 @@ public class AcceptCommandsTest {
     }
 
     @Test
-    void shouldGetCommand() {
+    void shouldGetGreetCommand() {
         AcceptCommands acceptCommands = new AcceptCommands("greet sandiso venda");
 
         assertEquals("greet", acceptCommands.getCommand());
@@ -25,5 +25,12 @@ public class AcceptCommandsTest {
         AcceptCommands acceptCommands = new AcceptCommands("greet sandiso venda");
 
         assertEquals("venda", acceptCommands.getLanguage());
+    }
+    
+    @Test
+    void shouldGetGreetedCommand() {
+        AcceptCommands acceptCommands = new AcceptCommands("greeted");
+        
+        assertEquals("greeted", acceptCommands.getCommand());
     }
 }
