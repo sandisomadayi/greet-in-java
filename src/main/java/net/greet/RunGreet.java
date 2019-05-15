@@ -6,8 +6,8 @@ public class RunGreet {
 
     public static void main(String[] args) {
 
-        Greeting greeting = new Greet();
-//        Greeting greeting = new JDBCGreet();
+//        Greeting greeting = new Greet();
+        Greeting greeting = new JDBCGreet();
         Scanner scanner = new Scanner(System.in);
 
         Processor processor = new Processor(greeting);

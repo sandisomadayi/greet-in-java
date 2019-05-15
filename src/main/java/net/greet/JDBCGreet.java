@@ -77,8 +77,7 @@ public class JDBCGreet implements Greeting {
 //                System.out.println(entry.getKey() + ":  " + entry.getValue());
 //            }
 
-
-            if (!name.equals(null)) {
+            if (!name.equals("")) {
                 if (userNames.containsKey(name)) {
                     return name + " has been greeted " + userNames.get(name) + " time(s)";
                 }
@@ -93,8 +92,6 @@ public class JDBCGreet implements Greeting {
         catch (Exception e) {
             return userNames.toString();
         }
-
-
     }
 
     public String clear(String name) {
@@ -109,7 +106,7 @@ public class JDBCGreet implements Greeting {
             deleteName.setString(1, name);
             deleteName.executeUpdate();
 
-            if (name == null) {
+            if (name.equals("")) {
                 deleteEverything.executeUpdate();
                 return "All names deleted!";
             }
@@ -121,8 +118,6 @@ public class JDBCGreet implements Greeting {
                     return name + " has not been greeted, try greeting it first.";
                 }
             }
-
-
         }
         catch (Exception e) {
             e.printStackTrace();

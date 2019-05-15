@@ -22,8 +22,8 @@ public class AcceptCommandsTest {
 
     @Test
     void shouldGetLanguage() {
-        AcceptCommands acceptCommands = new AcceptCommands("greet sandiso venda");
+        AcceptCommands acceptCommands = new AcceptCommands("greet sandiso");
 
-        assertEquals("venda", acceptCommands.getLanguage());
+        assertEquals("english", acceptCommands.getLanguage());
     }
 }

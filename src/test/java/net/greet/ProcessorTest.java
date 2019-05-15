@@ -71,7 +71,7 @@ public class ProcessorTest {
 
     @Test
     void shouldShowGreetedNames() {
-        AcceptCommands acceptCommands = new AcceptCommands("clear babs");
+        AcceptCommands acceptCommands = new AcceptCommands("clear Babs");
         Greeting greeting = new JDBCGreet();
         Processor processor = new Processor(greeting);
 
