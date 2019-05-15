@@ -27,7 +27,7 @@ public class Greet implements Greeting {
 
     public String greeted(String userName) {
         try {
-            if (userName == null) {
+            if (userName.equals("")) {
                 if (userNameMap.isEmpty()) {
                     return "no one is greeted";
                 }
@@ -51,19 +51,19 @@ public class Greet implements Greeting {
     }
 
     public String counter () {
-        return "name(s) greeted " + userNameMap.size();
+        return "name(s) greeted: " + userNameMap.size();
     }
 
     public String clear(String userName) {
         try {
-            if (userName == null) {
+            if (userName.equals("")) {
                 userNameMap.clear();
-                return "All names deleted";
+                return "All names deleted.";
             }
             else {
                 if (userNameMap.containsKey(userName)) {
                     userNameMap.remove(userName);
-                    return userName + " removed from the map";
+                    return userName + " deleted.";
                 }
                 return userName + " has not been greeted, try greeting it first.";
             }

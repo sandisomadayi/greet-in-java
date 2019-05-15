@@ -9,7 +9,7 @@ public class ProcessorTest {
     @BeforeEach
     public void shouldClearAllAndAddNames() {
         Greeting greeting = new JDBCGreet();
-        greeting.clear(null);
+        greeting.clear("");
         greeting.greet("sandiso", "xhosa");
         greeting.greet("sandman", "venda");
         greeting.greet("madayi", "tsonga");

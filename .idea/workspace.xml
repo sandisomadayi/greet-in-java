@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="12196e09-662c-4a96-8d21-63e50e1eb379" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/AcceptCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/AcceptCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/JDBCGreet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/JDBCGreet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/Processor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/Processor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/RunGreet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/RunGreet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/greet/Greet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/greet/Greet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/net/greet/AcceptCommandsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/greet/AcceptCommandsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/greet/GreetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/greet/GreetTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/net/greet/JDBCGreetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/greet/JDBCGreetTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/net/greet/ProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/greet/ProcessorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/net/greet/ResultGetTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/greet/ResultGetTest.java" afterDir="false" />
     </list>
@@ -49,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+            <state relative-caret-position="144">
+              <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
               <folding>
                 <element signature="e#1580#1581#0" expanded="true" />
                 <element signature="e#1642#1643#0" expanded="true" />
@@ -60,10 +59,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/JDBCGreetTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="38" column="68" lean-forward="true" selection-start-line="38" selection-start-column="68" selection-end-line="38" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/GreetTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-210">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+            <state relative-caret-position="1035">
+              <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -72,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Processor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="293">
-              <caret line="40" column="53" lean-forward="true" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+              <caret line="40" column="53" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
               <folding>
                 <element signature="e#665#666#0" expanded="true" />
                 <element signature="e#705#706#0" expanded="true" />
@@ -82,25 +90,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Language.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-              <folding>
-                <element signature="e#492#493#0" expanded="true" />
-                <element signature="e#532#533#0" expanded="true" />
-                <element signature="e#566#567#0" expanded="true" />
-                <element signature="e#597#598#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/ResultGetTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
+            <state relative-caret-position="870">
+              <caret line="60" column="72" lean-forward="true" selection-start-line="60" selection-start-column="72" selection-end-line="60" selection-end-column="72" />
             </state>
           </provider>
         </entry>
@@ -108,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/ProcessorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="75" column="43" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
+            <state relative-caret-position="165">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,16 +110,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/AcceptCommandsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+            <state relative-caret-position="195">
+              <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/JDBCGreet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="609">
@@ -188,17 +181,17 @@
         <option value="$PROJECT_DIR$/src/main/java/net/greet/SomeClass.java" />
         <option value="$PROJECT_DIR$/src/test/java/net/JDBCGreetTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/ResultSet.java" />
-        <option value="$PROJECT_DIR$/src/test/java/net/greet/GreetTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/net/greet/JDBCGreetTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/ResultGet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/net/greet/Greet.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/RunGreet.java" />
-        <option value="$PROJECT_DIR$/src/test/java/net/greet/ProcessorTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/net/greet/ResultGetTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/AcceptCommands.java" />
-        <option value="$PROJECT_DIR$/src/test/java/net/greet/AcceptCommandsTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/Processor.java" />
         <option value="$PROJECT_DIR$/src/main/java/net/greet/JDBCGreet.java" />
+        <option value="$PROJECT_DIR$/src/test/java/net/greet/ResultGetTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/net/greet/ProcessorTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/net/greet/JDBCGreetTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/net/greet/Greet.java" />
+        <option value="$PROJECT_DIR$/src/test/java/net/greet/GreetTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/net/greet/AcceptCommandsTest.java" />
       </list>
     </option>
   </component>
@@ -311,21 +304,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RunGreet">
-    <configuration name="RunGreet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="net.greet.RunGreet" />
-      <module name="greet-in-java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.greet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AcceptCommandsTest.shouldGetLanguage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AcceptCommandsTest">
+    <configuration name="AcceptCommandsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="greet-in-java" />
       <extension name="coverage">
         <pattern>
@@ -335,28 +315,12 @@
       </extension>
       <option name="PACKAGE_NAME" value="net.greet" />
       <option name="MAIN_CLASS_NAME" value="net.greet.AcceptCommandsTest" />
-      <option name="METHOD_NAME" value="shouldGetLanguage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProcessorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="greet-in-java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="net.greet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="net.greet" />
-      <option name="MAIN_CLASS_NAME" value="net.greet.ProcessorTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ResultGetTest.shouldDisplayMessage2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AcceptCommandsTest.shouldDisplayDefaultLanguage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="greet-in-java" />
       <extension name="coverage">
         <pattern>
@@ -365,14 +329,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="net.greet" />
-      <option name="MAIN_CLASS_NAME" value="net.greet.ResultGetTest" />
-      <option name="METHOD_NAME" value="shouldDisplayMessage2" />
+      <option name="MAIN_CLASS_NAME" value="net.greet.AcceptCommandsTest" />
+      <option name="METHOD_NAME" value="shouldDisplayDefaultLanguage" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ResultGetTest.shouldDisplayStatus2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GreetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="greet-in-java" />
       <extension name="coverage">
         <pattern>
@@ -381,8 +345,39 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="net.greet" />
-      <option name="MAIN_CLASS_NAME" value="net.greet.ResultGetTest" />
-      <option name="METHOD_NAME" value="shouldDisplayStatus2" />
+      <option name="MAIN_CLASS_NAME" value="net.greet.GreetTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GreetTest.shouldReturnGreeting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="greet-in-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.greet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.greet" />
+      <option name="MAIN_CLASS_NAME" value="net.greet.GreetTest" />
+      <option name="METHOD_NAME" value="shouldReturnGreeting" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JDBCGreetTest.shouldReturnAllGreetedUsers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="greet-in-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.greet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.greet" />
+      <option name="MAIN_CLASS_NAME" value="net.greet.JDBCGreetTest" />
+      <option name="METHOD_NAME" value="shouldReturnAllGreetedUsers" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -390,11 +385,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.RunGreet" />
-        <item itemvalue="JUnit.AcceptCommandsTest.shouldGetLanguage" />
-        <item itemvalue="JUnit.ResultGetTest.shouldDisplayStatus2" />
-        <item itemvalue="JUnit.ResultGetTest.shouldDisplayMessage2" />
-        <item itemvalue="JUnit.ProcessorTest" />
+        <item itemvalue="JUnit.AcceptCommandsTest" />
+        <item itemvalue="JUnit.JDBCGreetTest.shouldReturnAllGreetedUsers" />
+        <item itemvalue="JUnit.AcceptCommandsTest.shouldDisplayDefaultLanguage" />
+        <item itemvalue="JUnit.GreetTest" />
+        <item itemvalue="JUnit.GreetTest.shouldReturnGreeting" />
       </list>
     </recent_temporary>
   </component>
@@ -412,35 +407,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AcceptCommandsTest_shouldGetLanguage - 2019.05.15 at 10h 38m 19s.xml">
-      <configuration name="AcceptCommandsTest.shouldGetLanguage" configurationId="JUnit" />
+    <history-entry file="GreetTest_allNamesMustBeDeleted - 2019.05.15 at 15h 25m 57s.xml">
+      <configuration name="GreetTest.allNamesMustBeDeleted" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AcceptCommandsTest_shouldGetLanguage - 2019.05.15 at 10h 38m 42s.xml">
-      <configuration name="AcceptCommandsTest.shouldGetLanguage" configurationId="JUnit" />
+    <history-entry file="GreetTest_allNamesMustBeDeleted - 2019.05.15 at 15h 27m 07s.xml">
+      <configuration name="GreetTest.allNamesMustBeDeleted" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ResultGetTest_shouldDisplayMessage2 - 2019.05.15 at 11h 25m 58s.xml">
-      <configuration name="ResultGetTest.shouldDisplayMessage2" configurationId="JUnit" />
+    <history-entry file="GreetTest_shouldRemoveUserName - 2019.05.15 at 15h 27m 14s.xml">
+      <configuration name="GreetTest.shouldRemoveUserName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ResultGetTest_shouldDisplayMessage2 - 2019.05.15 at 11h 26m 26s.xml">
-      <configuration name="ResultGetTest.shouldDisplayMessage2" configurationId="JUnit" />
+    <history-entry file="GreetTest_shouldReturnAllCommands - 2019.05.15 at 15h 27m 25s.xml">
+      <configuration name="GreetTest.shouldReturnAllCommands" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ResultGetTest_shouldDisplayStatus2 - 2019.05.15 at 11h 28m 21s.xml">
-      <configuration name="ResultGetTest.shouldDisplayStatus2" configurationId="JUnit" />
+    <history-entry file="GreetTest_shouldReturnGreeting - 2019.05.15 at 15h 27m 32s.xml">
+      <configuration name="GreetTest.shouldReturnGreeting" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ResultGetTest_shouldDisplayStatus2 - 2019.05.15 at 11h 28m 54s.xml">
-      <configuration name="ResultGetTest.shouldDisplayStatus2" configurationId="JUnit" />
+    <history-entry file="GreetTest - 2019.05.15 at 15h 27m 41s.xml">
+      <configuration name="GreetTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ResultGetTest_shouldDisplayStatus2 - 2019.05.15 at 11h 29m 12s.xml">
-      <configuration name="ResultGetTest.shouldDisplayStatus2" configurationId="JUnit" />
+    <history-entry file="AcceptCommandsTest_shouldDisplayDefaultLanguage - 2019.05.15 at 15h 29m 32s.xml">
+      <configuration name="AcceptCommandsTest.shouldDisplayDefaultLanguage" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ResultGetTest_shouldDisplayStatus2 - 2019.05.15 at 11h 29m 30s.xml">
-      <configuration name="ResultGetTest.shouldDisplayStatus2" configurationId="JUnit" />
+    <history-entry file="AcceptCommandsTest - 2019.05.15 at 15h 29m 43s.xml">
+      <configuration name="AcceptCommandsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AcceptCommandsTest_shouldGetLanguage - 2019.05.15 at 12h 00m 33s.xml">
-      <configuration name="AcceptCommandsTest.shouldGetLanguage" configurationId="JUnit" />
+    <history-entry file="JDBCGreetTest_shouldReturnAllGreetedUsers - 2019.05.15 at 15h 30m 05s.xml">
+      <configuration name="JDBCGreetTest.shouldReturnAllGreetedUsers" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AcceptCommandsTest_shouldGetLanguage - 2019.05.15 at 12h 00m 52s.xml">
-      <configuration name="AcceptCommandsTest.shouldGetLanguage" configurationId="JUnit" />
+    <history-entry file="AcceptCommandsTest - 2019.05.15 at 15h 31m 28s.xml">
+      <configuration name="AcceptCommandsTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -454,6 +449,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="59" y="25" width="1307" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49674267" visible="true" weight="0.25535288" />
       <window_info id="Structure" order="1" sideWeight="0.50325733" side_tool="true" weight="0.35448056" />
@@ -613,19 +609,6 @@
         <state relative-caret-position="-11827" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/JDBCGreetTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" selection-start-line="14" selection-end-line="17" selection-end-column="44" />
-          <folding>
-            <element signature="method#shouldShowHowManyTimesUserWasGreeted#0;class#JDBCGreetTest#0" />
-            <element signature="method#shouldReturnNumberOfNamesGreeted#0;class#JDBCGreetTest#0" />
-            <element signature="method#shouldDeleteAllNames#0;class#JDBCGreetTest#0" />
-            <element signature="method#shouldClearName#0;class#JDBCGreetTest#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/ResultGet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -653,37 +636,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/ProcessorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="75" column="43" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/ResultGetTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="42" column="54" selection-start-line="42" selection-start-column="54" selection-end-line="42" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/GreetTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-210">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/AcceptCommandsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="26" column="29" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/RunGreet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -694,7 +646,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Processor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="293">
-          <caret line="40" column="53" lean-forward="true" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
+          <caret line="40" column="53" selection-start-line="40" selection-start-column="53" selection-end-line="40" selection-end-column="53" />
           <folding>
             <element signature="e#665#666#0" expanded="true" />
             <element signature="e#705#706#0" expanded="true" />
@@ -714,17 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding>
-            <element signature="e#1580#1581#0" expanded="true" />
-            <element signature="e#1642#1643#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/JDBCGreet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="609">
@@ -732,6 +673,55 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/ResultGetTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="60" column="72" lean-forward="true" selection-start-line="60" selection-start-column="72" selection-end-line="60" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/ProcessorTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/net/greet/Greet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+          <folding>
+            <element signature="e#1580#1581#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/JDBCGreetTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="38" column="68" lean-forward="true" selection-start-line="38" selection-start-column="68" selection-end-line="38" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/GreetTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1035">
+          <caret line="71" column="40" selection-start-line="71" selection-start-column="40" selection-end-line="71" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/net/greet/AcceptCommandsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
         </state>
       </provider>
     </entry>

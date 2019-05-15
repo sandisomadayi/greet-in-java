@@ -28,7 +28,7 @@ public class GreetTest {
         greet.greet("me", "Xhosa");
         greet.greet("anotherMe", "Venda");
 
-        assertEquals("{anotherme=1, me=1, sandman=1, sandiso=2}", greet.greeted(null));
+        assertEquals("{anotherme=1, me=1, sandman=1, sandiso=2}", greet.greeted(""));
     }
 
     @Test
@@ -56,11 +56,11 @@ public class GreetTest {
         greet.greet("anotherMe", "Venda");
 
 
-        assertEquals("name(s) greeted 4", greet.counter());
+        assertEquals("name(s) greeted: 4", greet.counter());
     }
 
     @Test
-    public void mapShouldBeEmpty() {
+    public void allNamesMustBeDeleted() {
         Greet greet = new Greet();
 
         greet.greet("SANDISO", "xhosa");
@@ -69,9 +69,7 @@ public class GreetTest {
         greet.greet("me", "Xhosa");
         greet.greet("anotherMe", "Venda");
 
-        greet.clear(null);
-        //System.out.println(greet.counter());
-        assertEquals("name(s) greeted 0", greet.counter());
+        assertEquals("All names deleted.", greet.clear(""));
     }
 
     @Test
@@ -84,8 +82,7 @@ public class GreetTest {
         greet.greet("me", "Xhosa");
         greet.greet("anotherMe", "Venda");
 
-        greet.clear("sandiso");
-        assertEquals("{anotherme=1, me=1, sandman=1}", greet.greeted(null));
+        assertEquals("sandiso deleted.", greet.clear("sandiso"));
     }
 
     @Test

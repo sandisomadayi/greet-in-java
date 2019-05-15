@@ -26,7 +26,7 @@ public class ResultGetTest {
     }
 
     @Test
-    void shouldDisplayMessage2() {
+    void shouldDisplayMessageWhenClearingName() {
         Greeting greeting = new JDBCGreet();
         AcceptCommands acceptCommands = new AcceptCommands("clear me");
         Processor processor = new Processor(greeting);
@@ -36,12 +36,28 @@ public class ResultGetTest {
     }
 
     @Test
-    void shouldDisplayStatus2() {
+    void shouldDisplayStatusWhenInvalidCommandEntered() {
         Greeting greeting = new JDBCGreet();
         AcceptCommands acceptCommands = new AcceptCommands("fgjfsdlksjkgl jklfdjlkgsl glskjlkf jfallf jflaflk jlafjlasd");
         Processor processor = new Processor(greeting);
         ResultGet resultGet = new ResultGet(processor.processCommands(acceptCommands));
 
         assertEquals(true, resultGet.getMenuStatus());
+    }
+    @Test
+    void shouldDisplayMessageWhenInvalidCommandEntered() {
+        Greeting greeting = new JDBCGreet();
+        AcceptCommands acceptCommands = new AcceptCommands("fgjfsdlksjkgl jklfdjlkgsl glskjlkf jfallf jflaflk jlafjlasd");
+        Processor processor = new Processor(greeting);
+        ResultGet resultGet = new ResultGet(processor.processCommands(acceptCommands));
+
+        assertEquals("Command entered not valid!\n" +
+                "Valid commands are:\n" +
+                "greet - with a name will greet the person in a specified language\n" +
+                "greeted - shows how many times a person was greeted\n" +
+                "count - shows how many people were greeted\n" +
+                "clear - deletes a name or all names that were greeted\n" +
+                "help - displays commands to use\n" +
+                "exit - exits the application", resultGet.getMessage());
     }
 }
