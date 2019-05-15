@@ -21,7 +21,7 @@ public class Processor {
 
     public String processCommands(AcceptCommands acceptCommands) {
         if (acceptCommands.getCommand().equals("greet")) {
-            if (acceptCommands.getUserName() == null) {
+            if (acceptCommands.getUserName().equals("")) {
                 return "greet works with a name";
             }
             return greeting.greet(acceptCommands.getUserName(), acceptCommands.getLanguage());

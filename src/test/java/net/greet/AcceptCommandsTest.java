@@ -7,30 +7,30 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class AcceptCommandsTest {
 
     @Test
-    void shouldGetUserName() {
+    void shouldDisplayUserName() {
         AcceptCommands acceptCommands = new AcceptCommands("greet sandiso venda");
 
         assertEquals("sandiso", acceptCommands.getUserName());
     }
 
     @Test
-    void shouldGetGreetCommand() {
+    void shouldDisplayCommand() {
         AcceptCommands acceptCommands = new AcceptCommands("greet sandiso venda");
 
         assertEquals("greet", acceptCommands.getCommand());
     }
 
     @Test
-    void shouldGetLanguage() {
-        AcceptCommands acceptCommands = new AcceptCommands("greet sandiso venda");
+    void shouldDisplayDefaultLanguage() {
+        AcceptCommands acceptCommands = new AcceptCommands("greet sandiso");
+
+        assertEquals("english", acceptCommands.getLanguage());
+    }
+
+    @Test
+    void shouldDisplayEnteredLanguage() {
+        AcceptCommands acceptCommands = new AcceptCommands("greet me venda");
 
         assertEquals("venda", acceptCommands.getLanguage());
-    }
-    
-    @Test
-    void shouldGetGreetedCommand() {
-        AcceptCommands acceptCommands = new AcceptCommands("greeted");
-        
-        assertEquals("greeted", acceptCommands.getCommand());
     }
 }

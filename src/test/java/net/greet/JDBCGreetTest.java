@@ -12,7 +12,7 @@ public class JDBCGreetTest {
     public void clearAllAndAddNames() {
         JDBCGreet jdbcGreet = new JDBCGreet();
 
-        jdbcGreet.clear(null);
+        jdbcGreet.clear("");
         jdbcGreet.greet("sandiso", "xhosa");
         jdbcGreet.greet("sandman", "venda");
         jdbcGreet.greet("madayi", "tsonga");
@@ -29,7 +29,7 @@ public class JDBCGreetTest {
     public void shouldReturnAllGreetedUsers() {
         JDBCGreet jdbcGreet = new JDBCGreet();
 
-        assertEquals("{madayi=1, sandman=1, sandiso=1}", jdbcGreet.greeted(null));
+        assertEquals("{madayi=1, sandman=1, sandiso=1}", jdbcGreet.greeted(""));
     }
 
     @Test
@@ -43,7 +43,6 @@ public class JDBCGreetTest {
     public void shouldReturnNumberOfNamesGreeted() {
         JDBCGreet jdbcGreet = new JDBCGreet();
 
-        jdbcGreet.greeted(null);
         assertEquals("names greeted: 3", jdbcGreet.counter());
     }
 
@@ -51,7 +50,7 @@ public class JDBCGreetTest {
     public void shouldDeleteAllNames() {
         JDBCGreet jdbcGreet = new JDBCGreet();
 
-        assertEquals("All names deleted!", jdbcGreet.clear(null));
+        assertEquals("All names deleted!", jdbcGreet.clear(""));
     }
 
     @Test
