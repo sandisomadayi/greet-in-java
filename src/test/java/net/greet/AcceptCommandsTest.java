@@ -29,7 +29,7 @@ public class AcceptCommandsTest {
 
     @Test
     void shouldDisplayEnteredLanguage() {
-        AcceptCommands acceptCommands = new AcceptCommands("greet me venda");
+        AcceptCommands acceptCommands = new AcceptCommands("greet mafalala venda");
 
         assertEquals("venda", acceptCommands.getLanguage());
     }

@@ -73,10 +73,6 @@ public class JDBCGreet implements Greeting {
                 userNames.put(resultSet.getString("name"), resultSet.getInt("counter"));
             }
 
-//            for (Map.Entry<String, Integer> entry:userNames.entrySet()) {
-//                System.out.println(entry.getKey() + ":  " + entry.getValue());
-//            }
-
             if (!name.equals("")) {
                 if (userNames.containsKey(name)) {
                     return name + " has been greeted " + userNames.get(name) + " time(s)";
@@ -86,11 +82,35 @@ public class JDBCGreet implements Greeting {
                 }
             }
 
-            return userNames.toString();
+            if (userNames.isEmpty() == true) {
+                return "no one is greeted";
+            }
+            return showGreetedNames();
 
         }
         catch (Exception e) {
             return userNames.toString();
+        }
+    }
+
+    public String showGreetedNames() {
+        try {
+            Map<String, Integer> map = new HashMap<>();
+            ResultSet resultSet = returnTable.executeQuery();
+
+            while (resultSet.next()) {
+                map.put(resultSet.getString("name"), resultSet.getInt("counter"));
+            }
+            System.out.println("Name:   Counter");
+
+            for (Map.Entry<String, Integer> entry:map.entrySet()) {
+                System.out.println(entry.getKey() + ":  " + entry.getValue());
+            }
+            return "";
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "";
         }
     }
 
@@ -103,8 +123,6 @@ public class JDBCGreet implements Greeting {
             while (resultSet.next()) {
                 userNames.put(resultSet.getString("name"), resultSet.getInt("counter"));
             }
-            deleteName.setString(1, name);
-            deleteName.executeUpdate();
 
             if (name.equals("")) {
                 deleteEverything.executeUpdate();
@@ -112,6 +130,8 @@ public class JDBCGreet implements Greeting {
             }
             else {
                 if (userNames.containsKey(name)) {
+                    deleteName.setString(1, name);
+                    deleteName.executeUpdate();
                     return name + " deleted!";
                 }
                 else {
@@ -121,7 +141,7 @@ public class JDBCGreet implements Greeting {
         }
         catch (Exception e) {
             e.printStackTrace();
-            return name + " deleted!";
+            return "";
         }
     }
 
