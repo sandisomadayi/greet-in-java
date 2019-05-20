@@ -11,10 +11,10 @@ public class Greet implements Greeting {
     private Map<String, Integer> userNameMap = new HashMap<>();
 
     public String greet (String userName, String language) {
-        if (userNameMap.containsKey(userName)) {
-            userNameMap.put(userName, userNameMap.get(userName) + 1);
+        if (userNameMap.containsKey(userName.toLowerCase())) {
+            userNameMap.put(userName.toLowerCase(), userNameMap.get(userName.toLowerCase()) + 1);
         } else {
-            userNameMap.put(userName, userNameCount);
+            userNameMap.put(userName.toLowerCase(), userNameCount);
         }
 
         try {
