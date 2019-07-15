@@ -6,6 +6,7 @@ public class ResultGet {
 
     public ResultGet(String message) {
         this.message = message;
+        //this.menuStatus = menuStatus;
 
         if (message.equals("Good bye")) {
             menuStatus = false;
