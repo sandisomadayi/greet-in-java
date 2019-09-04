@@ -32,7 +32,7 @@ public class ResultGetTest {
         Processor processor = new Processor(greeting);
         ResultGet resultGet = new ResultGet(processor.processCommands(acceptCommands));
 
-        assertEquals("me has not been greeted, try greeting it first.", resultGet.getMessage());
+        assertEquals("me deleted!", resultGet.getMessage());
     }
 
     @Test
